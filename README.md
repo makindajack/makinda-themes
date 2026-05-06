@@ -10,13 +10,13 @@
 
 <p align="center">
   <a href="https://marketplace.visualstudio.com/items?itemName=makindajack.makinda-themes">
-    <img alt="Version" src="https://img.shields.io/visual-studio-marketplace/v/makindajack.makinda-themes.svg?style=for-the-badge&labelColor=0e0e0f&color=f05106">
+    <img alt="Version" src="https://vsmarketplacebadges.dev/version-short/makindajack.makinda-themes.svg?style=for-the-badge&labelColor=0e0e0f&color=f05106">
   </a>
   <a href="https://marketplace.visualstudio.com/items?itemName=makindajack.makinda-themes">
-    <img alt="Downloads" src="https://img.shields.io/visual-studio-marketplace/d/makindajack.makinda-themes.svg?style=for-the-badge&labelColor=0e0e0f&color=f05106">
+    <img alt="Installs" src="https://vsmarketplacebadges.dev/installs-short/makindajack.makinda-themes.svg?style=for-the-badge&labelColor=0e0e0f&color=f05106">
   </a>
   <a href="https://marketplace.visualstudio.com/items?itemName=makindajack.makinda-themes">
-    <img alt="Rating" src="https://img.shields.io/visual-studio-marketplace/stars/makindajack.makinda-themes.svg?style=for-the-badge&labelColor=0e0e0f&color=f05106">
+    <img alt="Rating" src="https://vsmarketplacebadges.dev/rating-short/makindajack.makinda-themes.svg?style=for-the-badge&labelColor=0e0e0f&color=f05106">
   </a>
 </p>
 

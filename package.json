@@ -75,6 +75,7 @@
     "build:jetbrains": "node build/jetbrains.mjs",
     "build:sublime": "node build/sublime.mjs",
     "build:zed": "node build/zed.mjs",
+    "build:neovim": "node build/neovim.mjs",
     "build:alacritty": "node build/alacritty.mjs",
     "build:kitty": "node build/kitty.mjs",
     "build:warp": "node build/warp.mjs",

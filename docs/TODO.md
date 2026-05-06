@@ -88,14 +88,14 @@ The Dark variant used to ship as the standalone extension `makindajack.makinda-d
 
 ## Phase 6 — Neovim & Vim
 
-- [ ] Scaffold `ports/neovim/lua/makinda/`
-- [ ] Generate `init.lua` with `setup({ variant = "light" | "dark" })`
-- [ ] Cover Treesitter highlight groups
-- [ ] Cover LSP semantic tokens
-- [ ] Cover diagnostics, gitsigns, telescope, nvim-tree/neo-tree, lualine
-- [ ] Generate Vim fallback `colors/makinda-light.vim` and `colors/makinda-dark.vim`
-- [ ] Cterm (256-color) fallback table
-- [ ] README install instructions for lazy.nvim / packer / vim-plug
+- [x] Scaffold `ports/neovim/lua/makinda/`
+- [x] Generate `init.lua` with `setup({ variant = "light" | "dark" })`
+- [x] Cover Treesitter highlight groups
+- [x] Cover LSP semantic tokens
+- [x] Cover diagnostics, gitsigns, telescope, nvim-tree/neo-tree, lualine
+- [x] Generate Vim fallback `colors/makinda-light.vim` and `colors/makinda-dark.vim`
+- [x] Cterm (256-color) fallback table
+- [x] README install instructions for lazy.nvim / packer / vim-plug
 
 ## Phase 7 — Xcode
 
