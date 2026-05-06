@@ -57,8 +57,8 @@ The Dark variant used to ship as the standalone extension `makindajack.makinda-d
 
 - [x] Cursor — works as-is via VS Code extension
 - [x] Windsurf — works as-is
-- [ ] Document install steps for Cursor / Windsurf in `INSTALLATION.md`
-- [ ] Add a "Compatible editors" section to `README.md`
+- [x] Document install steps for Cursor / Windsurf in `INSTALLATION.md`
+- [x] Add a "Compatible editors" section to `README.md`
 
 ## Phase 3 — JetBrains
 

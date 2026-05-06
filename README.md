@@ -23,6 +23,7 @@
 <p align="center">
   <a href="#features">Features</a> •
   <a href="#installation">Installation</a> •
+  <a href="#compatible-editors">Compatible Editors</a> •
   <a href="#activate-a-theme">Activate</a> •
   <a href="#recommended-settings">Recommended Settings</a> •
   <a href="#screenshots">Screenshots</a> •
@@ -72,6 +73,19 @@ code --install-extension makindajack.makinda-themes
 
 1. Download the latest `.vsix` from [Releases](https://github.com/makindajack/makinda-themes/releases)
 2. In VS Code, run `Extensions: Install from VSIX...` from the Command Palette and pick the file.
+
+## Compatible Editors
+
+Makinda Themes works in every editor that consumes the VS Code extension format. The same `.vsix` is published to both marketplaces:
+
+| Editor                              | Marketplace                                                                                           | Install                                                   |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| **VS Code**                         | [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=makindajack.makinda-themes) | `code --install-extension makindajack.makinda-themes`     |
+| **Cursor**                          | VS Code Marketplace (or Open VSX)                                                                     | `cursor --install-extension makindajack.makinda-themes`   |
+| **Windsurf**                        | [Open VSX](https://open-vsx.org/extension/makindajack/makinda-themes)                                 | `windsurf --install-extension makindajack.makinda-themes` |
+| **VSCodium / code-server / Gitpod** | [Open VSX](https://open-vsx.org/extension/makindajack/makinda-themes)                                 | `codium --install-extension makindajack.makinda-themes`   |
+
+See [docs/INSTALLATION.md](docs/INSTALLATION.md) for editor-by-editor walkthroughs and offline `.vsix` install steps.
 
 ## Activate a Theme
 

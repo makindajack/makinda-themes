@@ -64,6 +64,53 @@ code makinda-themes
 # The theme will be available in the new window
 ```
 
+## Compatible Editors
+
+Makinda Themes is a standard VS Code color-theme extension, so it runs in every editor that consumes the VS Code extension format. Pick the install path that matches your editor's marketplace.
+
+### Cursor
+
+Cursor reuses the VS Code extension API and ships its own copy of the Marketplace, so the extension installs the same way as in VS Code.
+
+1. Open Cursor → **Extensions** (`⌘⇧X` / `Ctrl+Shift+X`).
+2. Search `Makinda Themes` (publisher: `makindajack`).
+3. Click **Install** → then `⌘K ⌘T` / `Ctrl+K Ctrl+T` and choose **Makinda Light** or **Makinda Dark**.
+
+If your Cursor build is pinned to Open VSX instead of the VS Code Marketplace, install with:
+
+```bash
+cursor --install-extension makindajack.makinda-themes
+```
+
+### Windsurf (Codeium)
+
+Windsurf ships with the Open VSX marketplace by default.
+
+1. Open Windsurf → **Extensions**.
+2. Search `Makinda Themes` (publisher: `makindajack`) — the listing comes from <https://open-vsx.org/extension/makindajack/makinda-themes>.
+3. Install, then activate the theme exactly as in VS Code.
+
+CLI alternative:
+
+```bash
+windsurf --install-extension makindajack.makinda-themes
+```
+
+### VSCodium / code-server / Gitpod / other forks
+
+Any fork that uses the Open VSX registry can install via Extensions search or:
+
+```bash
+codium --install-extension makindajack.makinda-themes
+# code-server: same flag, just substitute the binary
+```
+
+### Offline / air-gapped (any of the above)
+
+Download `makinda-themes-<version>.vsix` from [GitHub Releases](https://github.com/makindajack/makinda-themes/releases) and install with the editor's `--install-extension` flag, or via **Command Palette → Extensions: Install from VSIX…**.
+
+> Tip: regardless of editor, you can enable OS-appearance auto-switching with `window.autoDetectColorScheme` + `workbench.preferredLightColorTheme: "Makinda Light"` + `workbench.preferredDarkColorTheme: "Makinda Dark"` in your settings.
+
 ## Verifying Installation
 
 1. Open Command Palette (`Ctrl+Shift+P`)
