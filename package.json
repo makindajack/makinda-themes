@@ -78,10 +78,16 @@
     "build:neovim": "node build/neovim.mjs",
     "build:xcode": "node build/xcode.mjs",
     "build:helix": "node build/helix.mjs",
+    "build:textmate": "node build/textmate.mjs",
+    "build:emacs": "node build/emacs.mjs",
+    "build:notepad-plus-plus": "node build/notepad-plus-plus.mjs",
     "build:alacritty": "node build/alacritty.mjs",
     "build:kitty": "node build/kitty.mjs",
     "build:warp": "node build/warp.mjs",
+    "build:wezterm": "node build/wezterm.mjs",
+    "build:ghostty": "node build/ghostty.mjs",
     "build:windows-terminal": "node build/windows-terminal.mjs",
-    "build:iterm2": "node build/iterm2.mjs"
+    "build:iterm2": "node build/iterm2.mjs",
+    "release": "node build/release.mjs"
   }
 }

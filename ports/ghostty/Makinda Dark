@@ -1,0 +1,26 @@
+# Makinda Dark — Ghostty theme
+# Generated from source/palette.json. Do not edit by hand.
+
+background = 0e0e0f
+foreground = e7e8ea
+cursor-color = ff6b0d
+cursor-text = 0e0e0f
+selection-background = 1e2022
+selection-foreground = e7e8ea
+
+palette = 0=0e0e0f
+palette = 1=f87171
+palette = 2=34d399
+palette = 3=fbbf24
+palette = 4=60a5fa
+palette = 5=a78bfa
+palette = 6=2dd4bf
+palette = 7=e6e6e8
+palette = 8=6b7280
+palette = 9=fca5a5
+palette = 10=86efac
+palette = 11=fde68a
+palette = 12=93c5fd
+palette = 13=c4b5fd
+palette = 14=67e8f9
+palette = 15=ffffff

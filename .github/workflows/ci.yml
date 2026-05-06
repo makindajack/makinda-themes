@@ -1,0 +1,50 @@
+name: ci
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install
+        run: npm ci || npm install
+      - name: Validate (strict)
+        run: npm run validate:strict
+      - name: Contrast check
+        run: npm run contrast
+      - name: Build all ports
+        run: npm run build
+      - name: Lint Xcode plists
+        run: |
+          if command -v plutil >/dev/null 2>&1; then
+            plutil -lint ports/xcode/*.xccolortheme
+          else
+            echo "plutil not available on Linux runner; skipping."
+          fi
+      - name: Validate JSON outputs
+        run: |
+          set -e
+          for f in themes/*.json ports/sublime/*.sublime-color-scheme ports/zed/themes/*.json; do
+            node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" && echo "ok: $f"
+          done
+      - name: Validate TOML outputs
+        run: |
+          python3 - <<'PY'
+          import sys, glob
+          try:
+              import tomllib
+          except ImportError:
+              import tomli as tomllib  # py<3.11 fallback
+          for f in glob.glob("ports/helix/*.toml") + glob.glob("ports/alacritty/*.toml") + glob.glob("ports/zed/extension.toml"):
+              with open(f, "rb") as fh:
+                  tomllib.load(fh)
+                  print("ok:", f)
+          PY

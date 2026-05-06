@@ -117,26 +117,26 @@ The Dark variant used to ship as the standalone extension `makindajack.makinda-d
 - [x] Warp — `ports/warp/makinda_light.yaml`, `…dark.yaml`
 - [x] Alacritty — `ports/alacritty/makinda_light.toml`, `…dark.toml`
 - [x] Kitty — `ports/kitty/makinda_light.conf`, `…dark.conf`
-- [ ] WezTerm — `ports/wezterm/makinda.lua`
+- [x] WezTerm — `ports/wezterm/makinda.lua`
 - [x] Windows Terminal — JSON snippet in `ports/windows-terminal/`
-- [ ] Ghostty — theme file in `ports/ghostty/`
+- [x] Ghostty — theme file in `ports/ghostty/`
 
 ## Phase 10 — Backlog (Tier 3)
 
-- [ ] Emacs `makinda-theme.el`
+- [x] Emacs `makinda-theme.el` (`ports/emacs/`)
 - [ ] Visual Studio (full) `.vssettings`
-- [ ] TextMate `.tmTheme`
-- [ ] Notepad++ XML
+- [x] TextMate `.tmTheme` (`ports/textmate/`)
+- [x] Notepad++ XML (`ports/notepad-plus-plus/`)
 - [ ] Eclipse `.epf`
 - [ ] BBEdit, Nova, Lapce
 - [ ] Slack, Discord (BetterDiscord), Obsidian CSS
 
 ## Cross-cutting fixes
 
-- [ ] Add CI (GitHub Actions): lint JSON, run build, run contrast check
-- [ ] Add `scripts/contrast-check.mjs` — fails on AA violations for body text
+- [x] Add CI (GitHub Actions): lint JSON, run build, run contrast check (`.github/workflows/ci.yml`)
+- [x] Add `scripts/contrast-check.mjs` — fails on AA violations for body text _(implemented as `build/contrast.mjs` + `npm run contrast:strict`)_
 - [ ] Add screenshot generator (Playwright + a reference snippet) to keep marketing PNGs in sync
-- [ ] Single `release.mjs` that bumps version across every port and tags
+- [x] Single `release.mjs` that bumps version across every port and tags (`build/release.mjs`)
 
 ## Known issues to fix
 
