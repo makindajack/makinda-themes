@@ -205,10 +205,7 @@
     },
     {
       "name": "java type",
-      "scope": [
-        "storage.type.annotation.java",
-        "storage.type.object.array.java"
-      ],
+      "scope": ["storage.type.annotation.java", "storage.type.object.array.java"],
       "settings": {
         "foreground": "#7c3aed"
       }
@@ -592,12 +589,7 @@
     },
     {
       "name": "Functions",
-      "scope": [
-        "entity.name.function",
-        "meta.require",
-        "support.function.any-method",
-        "variable.function"
-      ],
+      "scope": ["entity.name.function", "meta.require", "support.function.any-method", "variable.function"],
       "settings": {
         "foreground": "#f05106"
       }
@@ -625,11 +617,7 @@
     },
     {
       "name": "Class name",
-      "scope": [
-        "entity.name.class",
-        "variable.other.class.js",
-        "variable.other.class.ts"
-      ],
+      "scope": ["entity.name.class", "variable.other.class.js", "variable.other.class.ts"],
       "settings": {
         "foreground": "#7c3aed"
       }
@@ -1405,10 +1393,7 @@
     },
     {
       "name": "go operator",
-      "scope": [
-        "keyword.operator.arithmetic.go",
-        "keyword.operator.address.go"
-      ],
+      "scope": ["keyword.operator.arithmetic.go", "keyword.operator.address.go"],
       "settings": {
         "foreground": "#c73b07"
       }
@@ -1450,10 +1435,7 @@
     },
     {
       "name": "styling css pseudo-elements/classes to be able to differentiate from classes which are the same colour",
-      "scope": [
-        "entity.other.attribute-name.pseudo-element",
-        "entity.other.attribute-name.pseudo-class"
-      ],
+      "scope": ["entity.other.attribute-name.pseudo-element", "entity.other.attribute-name.pseudo-class"],
       "settings": {
         "foreground": "#8947db"
       }
@@ -1674,11 +1656,7 @@
     },
     {
       "name": "Markdown underscore-style headers",
-      "scope": [
-        "entity.name.label.cs",
-        "markup.heading.setext.1.markdown",
-        "markup.heading.setext.2.markdown"
-      ],
+      "scope": ["entity.name.label.cs", "markup.heading.setext.1.markdown", "markup.heading.setext.2.markdown"],
       "settings": {
         "foreground": "#f05106"
       }

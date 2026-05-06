@@ -11,6 +11,7 @@ import { dirname, join } from "node:path";
 const here = dirname(fileURLToPath(import.meta.url));
 
 const ports = [
+    "vscode.mjs",
     "alacritty.mjs",
     "kitty.mjs",
     "warp.mjs",

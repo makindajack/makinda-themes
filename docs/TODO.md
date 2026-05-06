@@ -15,10 +15,10 @@ Status legend: `[ ]` not started · `[~]` in progress · `[x]` done
 - [x] Add a Node validator (`build/validate.mjs`) that flags theme colors not in the palette
 - [x] Wire `npm run validate` / `npm run validate:strict` into `package.json`
 - [x] Resolve all stragglers — `npm run validate:strict` is green for both variants
-- [ ] Add a Node build script (`build/vscode.mjs`) that regenerates the VS Code themes from source
-- [ ] Verify generated VS Code JSON is byte-identical to the hand-tuned files (or capture the diff intentionally)
-- [ ] Add `npm run build` and `npm run check` (lint + contrast audit)
-- [ ] Restructure repo into `ports/vscode/` (keep current marketplace package working — bump path in `package.json` once moved)
+- [x] Add a Node build script (`build/vscode.mjs`) that regenerates the VS Code themes from `source/vscode/{light,dark}.json`
+- [x] Verify generated VS Code JSON is byte-identical to the hand-tuned files
+- [x] Add `npm run build` and `npm run check` (validate + contrast audit)
+- [x] Repo layout decided: `themes/` + `package.json` stay at the root **(this is the VS Code port)**; every other port lives under `ports/<editor>/`. Moving `themes/` would force a marketplace path change for zero functional gain.
 
 ## Phase 1 — VS Code polish (current port)
 
@@ -126,10 +126,19 @@ The Dark variant used to ship as the standalone extension `makindajack.makinda-d
 
 ## Known issues to fix
 
+Surfaced by `npm run contrast` (WCAG 2.1):
+
+- [ ] Light `syntax.comment` `#9ca3af` on `#ffffff` — **2.54 : 1** (need 4.5). Darken to ~`#6b7280` or similar.
+- [ ] Light `syntax.function` `#f05106` on `#ffffff` — **3.57 : 1** (need 4.5). Use a darker accent for code text (e.g. `#c73b07`); keep the brighter shade for decorative UI only.
+- [ ] Dark `syntax.comment` `#6b7280` on `#0e0e0f` — **3.99 : 1** (need 4.5). Lighten to ~`#7d8593`.
+- [ ] Dark `fg.inverse` (`#ffffff`) on `brand.primary` `#ff6b0d` — **2.85 : 1** (need 3.0 for UI text). Either darken brand or switch inverse text on brand to a near-black.
+
+Other:
+
 - [ ] Light theme: orange on white can vibrate at small font sizes — consider a slightly darker brand variant for inline accents (`#d94405`?)
 - [ ] Dark theme: terminal cursor color blends into selection on some terminals
 - [ ] Inconsistent comment color between Light (`#9ca3af`) and Dark (`#6b7280`) — confirm intentional vs. swap
 
 ---
 
-**Next up:** Phase 0 (foundation) — once the source-of-truth pipeline exists, every later port becomes a generator file.
+**Next up:** Phase 1 — VS Code polish: fix the four contrast failures above, then ship to Open VSX so VSCodium / Cursor / Windsurf get auto-updates.

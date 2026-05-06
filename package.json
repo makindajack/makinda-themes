@@ -61,13 +61,17 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "echo 'Ready for publishing'",
+    "vscode:prepublish": "npm run build && npm run check",
     "package": "vsce package",
     "publish": "vsce publish",
     "validate": "node build/validate.mjs",
     "validate:strict": "node build/validate.mjs --strict",
     "validate:json": "node build/validate.mjs --json",
+    "contrast": "node build/contrast.mjs",
+    "contrast:strict": "node build/contrast.mjs --strict",
+    "check": "npm run validate:strict && npm run contrast",
     "build": "node build/index.mjs",
+    "build:vscode": "node build/vscode.mjs",
     "build:alacritty": "node build/alacritty.mjs",
     "build:kitty": "node build/kitty.mjs",
     "build:warp": "node build/warp.mjs",
