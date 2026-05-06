@@ -46,14 +46,14 @@ Both variants share the same brand language, so switching between them keeps you
 
 | Element            | Makinda Light | Makinda Dark |
 | ------------------ | ------------- | ------------ |
-| Brand Orange       | `#f05106`     | `#ff6b0d`    |
-| Functions          | `#f05106`     | `#ff8d37`    |
-| Keywords           | `#c73b07`     | `#ff6b0d`    |
-| Types / Classes    | `#7c3aed`     | `#a78bfa`    |
+| Brand Orange       | `#e65800`     | `#ff711a`    |
+| Functions          | `#e65800`     | `#ff9452`    |
+| Keywords           | `#b34400`     | `#ff711a`    |
+| Types / Classes    | `#6b26c0`     | `#a26ee2`    |
 | Strings            | `#0d7377`     | `#2dd4bf`    |
-| Comments           | `#6b7280`     | `#7d8593`    |
+| Comments           | `#71717a`     | `#7d8593`    |
 | Editor Background  | `#ffffff`     | `#0e0e0f`    |
-| Sidebar Background | `#f9f9fa`     | `#0e0e0f`    |
+| Sidebar Background | `#fafafa`     | `#0e0e0f`    |
 
 ## Installation
 
@@ -161,7 +161,7 @@ Pair Makinda Themes with one of these for a complete look:
   "editor.fontFamily": "'Fira Code', 'JetBrains Mono', Menlo, Monaco, monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
-  "editor.lineHeight": 1.6
+  "editor.lineHeight": 1.5
 }
 ```
 

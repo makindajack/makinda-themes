@@ -2,25 +2,25 @@
 # Generated from source/palette.json. Do not edit by hand.
 
 background = ffffff
-foreground = 1e2022
-cursor-color = f05106
+foreground = 27272a
+cursor-color = e65800
 cursor-text = ffffff
-selection-background = f3f3f5
-selection-foreground = 1e2022
+selection-background = f4f4f5
+selection-foreground = 27272a
 
-palette = 0=36393f
-palette = 1=dc2626
-palette = 2=16a34a
+palette = 0=52525b
+palette = 1=e11d48
+palette = 2=059669
 palette = 3=d97706
 palette = 4=2563eb
-palette = 5=7c3aed
+palette = 5=6b26c0
 palette = 6=06b6d4
-palette = 7=e5e7eb
-palette = 8=6b7280
-palette = 9=f87171
-palette = 10=22c55e
+palette = 7=e4e4e7
+palette = 8=71717a
+palette = 9=fb7185
+palette = 10=10b981
 palette = 11=fbbf24
 palette = 12=60a5fa
-palette = 13=a855f7
+palette = 13=a26ee2
 palette = 14=22d3ee
 palette = 15=ffffff

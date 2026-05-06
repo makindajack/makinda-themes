@@ -2,7 +2,7 @@
   "name": "makinda-themes",
   "displayName": "Makinda Themes",
   "description": "Premium light and dark themes for VS Code with warm orange accents and excellent readability",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "publisher": "makindajack",
   "icon": "images/icon.png",
   "author": {
@@ -43,7 +43,7 @@
     "Themes"
   ],
   "galleryBanner": {
-    "color": "#1a0d05",
+    "color": "#271002",
     "theme": "dark"
   },
   "contributes": {

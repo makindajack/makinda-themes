@@ -1,47 +1,47 @@
 <scheme name="Makinda Dark" version="142" parent_scheme="Darcula">
   <colors>
-    <option name="CARET_COLOR" value="FF6B0D" />
-    <option name="CARET_ROW_COLOR" value="161618" />
+    <option name="CARET_COLOR" value="FF711A" />
+    <option name="CARET_ROW_COLOR" value="18181B" />
     <option name="CONSOLE_BACKGROUND_KEY" value="0E0E0F" />
     <option name="GUTTER_BACKGROUND" value="0E0E0F" />
     <option name="INDENT_GUIDE" value="27272A" />
-    <option name="LINE_NUMBERS_COLOR" value="474B54" />
-    <option name="LINE_NUMBER_ON_CARET_ROW_COLOR" value="E7E8EA" />
-    <option name="MODIFIED_LINES_COLOR" value="FFB770" />
-    <option name="NOTIFICATION_BACKGROUND" value="1E2022" />
+    <option name="LINE_NUMBERS_COLOR" value="52525B" />
+    <option name="LINE_NUMBER_ON_CARET_ROW_COLOR" value="E4E4E7" />
+    <option name="MODIFIED_LINES_COLOR" value="F3B995" />
+    <option name="NOTIFICATION_BACKGROUND" value="27272A" />
     <option name="RIGHT_MARGIN_COLOR" value="27272A" />
-    <option name="SELECTED_INDENT_GUIDE" value="36393F" />
-    <option name="SELECTION_BACKGROUND" value="1E2022" />
-    <option name="SELECTION_FOREGROUND" value="E7E8EA" />
-    <option name="TEARLINE_COLOR" value="1E2022" />
+    <option name="SELECTED_INDENT_GUIDE" value="52525B" />
+    <option name="SELECTION_BACKGROUND" value="27272A" />
+    <option name="SELECTION_FOREGROUND" value="E4E4E7" />
+    <option name="TEARLINE_COLOR" value="27272A" />
     <option name="VISUAL_INDENT_GUIDE" value="27272A" />
-    <option name="WHITESPACES" value="36393F" />
+    <option name="WHITESPACES" value="52525B" />
   </colors>
   <attributes>
     <option name="TEXT">
       <value>
-        <option name="FOREGROUND" value="E7E8EA" />
+        <option name="FOREGROUND" value="E4E4E7" />
       </value>
     </option>
     <option name="BAD_CHARACTER">
       <value>
-        <option name="FOREGROUND" value="EF4444" />
+        <option name="FOREGROUND" value="F43F5E" />
         <option name="EFFECT_TYPE" value="5" />
       </value>
     </option>
     <option name="IDENTIFIER">
       <value>
-        <option name="FOREGROUND" value="E7E8EA" />
+        <option name="FOREGROUND" value="E4E4E7" />
       </value>
     </option>
     <option name="NUMBER">
       <value>
-        <option name="FOREGROUND" value="FF6B0D" />
+        <option name="FOREGROUND" value="FF711A" />
       </value>
     </option>
     <option name="KEYWORD">
       <value>
-        <option name="FOREGROUND" value="FF6B0D" />
+        <option name="FOREGROUND" value="FF711A" />
       </value>
     </option>
     <option name="STRING">
@@ -56,7 +56,7 @@
     </option>
     <option name="INVALID_STRING_ESCAPE">
       <value>
-        <option name="FOREGROUND" value="EF4444" />
+        <option name="FOREGROUND" value="F43F5E" />
       </value>
     </option>
     <option name="LINE_COMMENT">
@@ -79,7 +79,7 @@
     </option>
     <option name="DOC_COMMENT_TAG">
       <value>
-        <option name="FOREGROUND" value="FFB770" />
+        <option name="FOREGROUND" value="F3B995" />
       </value>
     </option>
     <option name="DOC_COMMENT_MARKUP">
@@ -89,152 +89,152 @@
     </option>
     <option name="OPERATION_SIGN">
       <value>
-        <option name="FOREGROUND" value="969BA6" />
+        <option name="FOREGROUND" value="A1A1AA" />
       </value>
     </option>
     <option name="BRACES">
       <value>
-        <option name="FOREGROUND" value="969BA6" />
+        <option name="FOREGROUND" value="A1A1AA" />
       </value>
     </option>
     <option name="BRACKETS">
       <value>
-        <option name="FOREGROUND" value="969BA6" />
+        <option name="FOREGROUND" value="A1A1AA" />
       </value>
     </option>
     <option name="PARENTHS">
       <value>
-        <option name="FOREGROUND" value="969BA6" />
+        <option name="FOREGROUND" value="A1A1AA" />
       </value>
     </option>
     <option name="DOT">
       <value>
-        <option name="FOREGROUND" value="969BA6" />
+        <option name="FOREGROUND" value="A1A1AA" />
       </value>
     </option>
     <option name="SEMICOLON">
       <value>
-        <option name="FOREGROUND" value="969BA6" />
+        <option name="FOREGROUND" value="A1A1AA" />
       </value>
     </option>
     <option name="COMMA">
       <value>
-        <option name="FOREGROUND" value="969BA6" />
+        <option name="FOREGROUND" value="A1A1AA" />
       </value>
     </option>
     <option name="LABEL">
       <value>
-        <option name="FOREGROUND" value="FF8D37" />
+        <option name="FOREGROUND" value="FF9452" />
       </value>
     </option>
     <option name="CONSTANT">
       <value>
-        <option name="FOREGROUND" value="B88EF2" />
+        <option name="FOREGROUND" value="C1A5E4" />
       </value>
     </option>
     <option name="LOCAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="E7E8EA" />
+        <option name="FOREGROUND" value="E4E4E7" />
       </value>
     </option>
     <option name="REASSIGNED_LOCAL_VARIABLE_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="E7E8EA" />
+        <option name="FOREGROUND" value="E4E4E7" />
       </value>
     </option>
     <option name="REASSIGNED_PARAMETER_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="FFB770" />
+        <option name="FOREGROUND" value="F3B995" />
       </value>
     </option>
     <option name="PARAMETER">
       <value>
-        <option name="FOREGROUND" value="FFB770" />
+        <option name="FOREGROUND" value="F3B995" />
       </value>
     </option>
     <option name="STATIC_FIELD_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="B88EF2" />
+        <option name="FOREGROUND" value="C1A5E4" />
       </value>
     </option>
     <option name="STATIC_METHOD_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="FF8D37" />
+        <option name="FOREGROUND" value="FF9452" />
       </value>
     </option>
     <option name="INSTANCE_FIELD_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="E7E8EA" />
+        <option name="FOREGROUND" value="E4E4E7" />
       </value>
     </option>
     <option name="INSTANCE_METHOD_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="FF8D37" />
+        <option name="FOREGROUND" value="FF9452" />
       </value>
     </option>
     <option name="METHOD_DECLARATION_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="FF8D37" />
+        <option name="FOREGROUND" value="FF9452" />
       </value>
     </option>
     <option name="METHOD_CALL_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="FF8D37" />
+        <option name="FOREGROUND" value="FF9452" />
       </value>
     </option>
     <option name="CLASS_NAME_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="A78BFA" />
+        <option name="FOREGROUND" value="A26EE2" />
       </value>
     </option>
     <option name="INTERFACE_NAME_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="A78BFA" />
+        <option name="FOREGROUND" value="A26EE2" />
       </value>
     </option>
     <option name="ABSTRACT_CLASS_NAME_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="A78BFA" />
+        <option name="FOREGROUND" value="A26EE2" />
       </value>
     </option>
     <option name="CLASS_REFERENCE_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="A78BFA" />
+        <option name="FOREGROUND" value="A26EE2" />
       </value>
     </option>
     <option name="ANONYMOUS_CLASS_NAME_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="A78BFA" />
+        <option name="FOREGROUND" value="A26EE2" />
       </value>
     </option>
     <option name="ENUM_NAME_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="B88EF2" />
+        <option name="FOREGROUND" value="C1A5E4" />
       </value>
     </option>
     <option name="TYPE_PARAMETER_NAME_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="A78BFA" />
+        <option name="FOREGROUND" value="A26EE2" />
       </value>
     </option>
     <option name="ANNOTATION_NAME_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="FFB770" />
+        <option name="FOREGROUND" value="F3B995" />
       </value>
     </option>
     <option name="ANNOTATION_ATTRIBUTE_NAME_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="FFB770" />
+        <option name="FOREGROUND" value="F3B995" />
       </value>
     </option>
     <option name="HTML_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="FF8D37" />
+        <option name="FOREGROUND" value="FF9452" />
       </value>
     </option>
     <option name="HTML_ATTRIBUTE_NAME">
       <value>
-        <option name="FOREGROUND" value="FFB770" />
+        <option name="FOREGROUND" value="F3B995" />
       </value>
     </option>
     <option name="HTML_ATTRIBUTE_VALUE">
@@ -244,7 +244,7 @@
     </option>
     <option name="HTML_TAG">
       <value>
-        <option name="FOREGROUND" value="969BA6" />
+        <option name="FOREGROUND" value="A1A1AA" />
       </value>
     </option>
     <option name="HTML_COMMENT">
@@ -260,12 +260,12 @@
     </option>
     <option name="XML_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="FF8D37" />
+        <option name="FOREGROUND" value="FF9452" />
       </value>
     </option>
     <option name="XML_ATTRIBUTE_NAME">
       <value>
-        <option name="FOREGROUND" value="FFB770" />
+        <option name="FOREGROUND" value="F3B995" />
       </value>
     </option>
     <option name="XML_ATTRIBUTE_VALUE">
@@ -275,36 +275,36 @@
     </option>
     <option name="XML_TAG_DATA">
       <value>
-        <option name="FOREGROUND" value="E7E8EA" />
+        <option name="FOREGROUND" value="E4E4E7" />
       </value>
     </option>
     <option name="MARKDOWN_HEADER_LEVEL_1">
       <value>
-        <option name="FOREGROUND" value="FF8D37" />
+        <option name="FOREGROUND" value="FF9452" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="MARKDOWN_HEADER_LEVEL_2">
       <value>
-        <option name="FOREGROUND" value="FF8D37" />
+        <option name="FOREGROUND" value="FF9452" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="MARKDOWN_HEADER_LEVEL_3">
       <value>
-        <option name="FOREGROUND" value="FF8D37" />
+        <option name="FOREGROUND" value="FF9452" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="MARKDOWN_BOLD">
       <value>
-        <option name="FOREGROUND" value="E7E8EA" />
+        <option name="FOREGROUND" value="E4E4E7" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="MARKDOWN_ITALIC">
       <value>
-        <option name="FOREGROUND" value="E7E8EA" />
+        <option name="FOREGROUND" value="E4E4E7" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -331,9 +331,9 @@
     </option>
     <option name="ERRORS_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="EF4444" />
+        <option name="FOREGROUND" value="F43F5E" />
         <option name="EFFECT_TYPE" value="2" />
-        <option name="EFFECT_COLOR" value="EF4444" />
+        <option name="EFFECT_COLOR" value="F43F5E" />
       </value>
     </option>
     <option name="WARNING_ATTRIBUTES">
@@ -352,16 +352,16 @@
     </option>
     <option name="DEPRECATED_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="969BA6" />
+        <option name="FOREGROUND" value="A1A1AA" />
         <option name="EFFECT_TYPE" value="1" />
-        <option name="EFFECT_COLOR" value="969BA6" />
+        <option name="EFFECT_COLOR" value="A1A1AA" />
       </value>
     </option>
     <option name="MARKED_FOR_REMOVAL_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="EF4444" />
+        <option name="FOREGROUND" value="F43F5E" />
         <option name="EFFECT_TYPE" value="1" />
-        <option name="EFFECT_COLOR" value="EF4444" />
+        <option name="EFFECT_COLOR" value="F43F5E" />
       </value>
     </option>
     <option name="TODO_DEFAULT_ATTRIBUTES">
@@ -372,42 +372,42 @@
     </option>
     <option name="FILESTATUS_ADDED">
       <value>
-        <option name="FOREGROUND" value="4ADE80" />
+        <option name="FOREGROUND" value="34D399" />
       </value>
     </option>
     <option name="FILESTATUS_MODIFIED">
       <value>
-        <option name="FOREGROUND" value="FFB770" />
+        <option name="FOREGROUND" value="F3B995" />
       </value>
     </option>
     <option name="FILESTATUS_DELETED">
       <value>
-        <option name="FOREGROUND" value="FF6B0D" />
+        <option name="FOREGROUND" value="FF711A" />
       </value>
     </option>
     <option name="FILESTATUS_IGNORED">
       <value>
-        <option name="FOREGROUND" value="6B7280" />
+        <option name="FOREGROUND" value="71717A" />
       </value>
     </option>
     <option name="FILESTATUS_NOT_CHANGED">
       <value>
-        <option name="FOREGROUND" value="969BA6" />
+        <option name="FOREGROUND" value="A1A1AA" />
       </value>
     </option>
     <option name="FILESTATUS_UNKNOWN">
       <value>
-        <option name="FOREGROUND" value="A78BFA" />
+        <option name="FOREGROUND" value="A26EE2" />
       </value>
     </option>
     <option name="CONSOLE_NORMAL_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="E7E8EA" />
+        <option name="FOREGROUND" value="E4E4E7" />
       </value>
     </option>
     <option name="CONSOLE_ERROR_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="EF4444" />
+        <option name="FOREGROUND" value="F43F5E" />
       </value>
     </option>
     <option name="CONSOLE_USER_INPUT">
@@ -417,7 +417,7 @@
     </option>
     <option name="CONSOLE_RED_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="F87171" />
+        <option name="FOREGROUND" value="FB7185" />
       </value>
     </option>
     <option name="CONSOLE_GREEN_OUTPUT">
@@ -437,7 +437,7 @@
     </option>
     <option name="CONSOLE_MAGENTA_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="A78BFA" />
+        <option name="FOREGROUND" value="A26EE2" />
       </value>
     </option>
     <option name="CONSOLE_CYAN_OUTPUT">
@@ -447,12 +447,12 @@
     </option>
     <option name="CONSOLE_WHITE_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="E6E6E8" />
+        <option name="FOREGROUND" value="E4E4E7" />
       </value>
     </option>
     <option name="CONSOLE_DARKGRAY_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="6B7280" />
+        <option name="FOREGROUND" value="71717A" />
       </value>
     </option>
   </attributes>

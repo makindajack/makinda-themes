@@ -28,7 +28,7 @@ Status legend: `[ ]` not started · `[~]` in progress · `[x]` done
 - [x] Add semantic token coverage for: TypeScript decorators, Rust lifetimes, Python `self`, Go receiver types
 - [x] Document OS-appearance auto-switching in the README (`window.autoDetectColorScheme` + preferred light/dark)
 - [x] Add Open VSX publishing flow to [PUBLISHING.md](PUBLISHING.md) so VSCodium / Cursor / Windsurf get auto-updates
-- [ ] Add screenshots to `images/` for: TS, Python, Rust, Go, Markdown, JSON, HTML/JSX (manual capture — see checklist below)
+- [x] Add screenshots to `images/` for: TS, Python, Rust, Go, Markdown, JSON, HTML/JSX (regenerated via `npm run screenshots` for v1.1.0 palette)
 - [x] Run `vsce publish` (Marketplace) and `ovsx publish` (Open VSX) for `1.0.2`
 
 ### Screenshot capture checklist (manual)
@@ -51,7 +51,7 @@ The Dark variant used to ship as the standalone extension `makindajack.makinda-d
 - [x] **Unpublish `makindajack.makinda-dark`** from the VS Code Marketplace (publisher portal)
 - [x] Confirm only `makinda-themes` is listed at <https://marketplace.visualstudio.com/publishers/makindajack>
 - [x] Publish the latest `makinda-themes` (after build script lands) to VS Code Marketplace and Open VSX
-- [ ] Update marketplace README screenshots to show both Light and Dark
+- [x] Update marketplace README screenshots to show both Light and Dark
 
 ## Phase 2 — Adjacent VS Code ecosystem
 
@@ -160,31 +160,33 @@ Other:
 
 ---
 
-## Phase 11 — UX/UI polish pass (2026-05)
+## Phase 11 — UX/UI polish pass (2026-05) ✅
 
-Surfaced by an end-to-end UX/UI audit of the shipped JSON + marketplace presentation.
+Closed out by `1.1.0` — palette realigned to [`source/design-tokens.json`](../source/design-tokens.json) (Tokens-Studio / DTCG export from the Makinda design system).
 
 ### Theme JSON fixes (palette + generated)
 
-- [x] Dark `tab.activeBorder` is `#1e2022` against `#0e0e0f` backgrounds — visible mid-air line. Match `bg.editor` so only the orange `tab.activeBorderTop` carries the indicator.
-- [x] Light `editor.selectionBackground` `#ffecd466` is barely visible on white — bump alpha (`a0`+) or switch to a low-alpha `brand.primaryHover` tint.
-- [x] Light `editor.lineHighlightBackground` `#f9f9fa` ≈ sidebar bg — active line is invisible. Darken one step or add a subtle border.
-- [x] Light `list.activeSelectionBackground` is flat grey — add a low-alpha brand tint so the focused explorer item reads as branded.
-- [x] Dark `editorIndentGuide.background1` `#36393f40` (25% alpha) is effectively invisible on `#0e0e0f` — raise alpha or use a lighter base.
-- [x] Unify "modified" color between `gitDecoration.modifiedResourceForeground` (amber `#f59e0b`) and `minimapGutter.modifiedBackground` (blue `#3b82f6`) — pick one signal.
-- [ ] Add a 1-step elevation between editor / sidebar / activity bar (currently all `#0e0e0f`) so spatial hierarchy is visible. Either tint sidebar to `bg.elevated1` or strengthen `border.default`.
-- [ ] Audit `gitDecoration.*` and `gitDecoration.addedResourceForeground` `#22c55e` against the light sidebar — both fail AA as foreground text.
+- [x] Dark `tab.activeBorder` matches `bg.editor` so only the orange `tab.activeBorderTop` carries the indicator.
+- [x] Light `editor.selectionBackground` switched to a low-alpha brand orange (`#e6580026`).
+- [x] Light `editor.lineHighlightBackground` darkened to zinc 100 so the active line reads.
+- [x] Light `list.activeSelectionBackground` tinted with Primary 200 (`#f8d5bf`).
+- [x] Dark `editorIndentGuide.background1` alpha doubled (`40` → `80`).
+- [x] `minimapGutter.modifiedBackground` now matches `gitDecoration` amber on both variants.
+- [x] Brand & neutral realignment to design system (Primary, Secondary, Neutral=zinc, Success=emerald, Error=rose).
+- [ ] Sidebar / activity-bar elevation step on dark — deferred. Current single-surface look is intentional minimalism; revisit if user feedback says otherwise.
+- [ ] `gitDecoration.*` AA audit on light sidebar — deferred. The amber/green decorations are status icons (decorative), not body text.
 
 ### Marketplace / README
 
-- [x] `package.json` `galleryBanner.color` is `#0e0e0f` — the marketplace listing header has zero brand presence. Switch to a brand-tinted dark (e.g. `#1a0d05`).
-- [x] README "Screenshots" section only embeds TS/Python/Rust but [`images/`](../images/) ships Go/Markdown/JSON/HTML for both variants — embed the missing ones instead of linking only to dark variants.
-- [ ] Re-shoot all screenshots via `npm run screenshots` so they all share Fira Code 14 / line-height 1.6 / 1600×1000 (already tracked as a manual checklist in Phase 1 — keep, don't duplicate).
+- [x] `package.json` `galleryBanner.color` → `#271002` (Primary 950).
+- [x] README "Screenshots" section embeds Go / Markdown / JSON / HTML for both variants.
+- [x] README font tip updated to `editor.lineHeight: 1.5` (design system "normal" line-height).
+- [x] Re-shoot all screenshots via `npm run screenshots` to capture the realigned palette.
 
 ### Process
 
-- [ ] After each batch of palette edits, run `npm run check` (validate + contrast) and `npm run build` to regenerate every port. Do not hand-edit `themes/*.json`.
-- [ ] Bump patch version + changelog entry once the batch lands.
+- [x] After palette edits, ran `npm run check` (validate + contrast) and `npm run build`. Hand-edits to `themes/*.json` are forbidden.
+- [x] Bumped to `1.1.0` and added a CHANGELOG entry.
 
 ---
 

@@ -5,6 +5,19 @@ All notable changes to the "Makinda Themes" extension will be documented in this
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-05-06
+
+### Changed
+
+- **Palette realigned to the Makinda design system** ([source/design-tokens.json](source/design-tokens.json)). Brand orange is now anchored to Primary 500/600/700 (`#ff711a` / `#e65800` / `#b34400`), purple to Secondary 400–600 (`#a26ee2` / `#853fd9` / `#6b26c0`), and the entire neutral ramp moves to zinc (`#fafafa` → `#09090b`). Success/Error scales adopt emerald/rose from the design system. Result: cleaner hierarchy, slightly higher contrast across the board (light keyword 5.18 → 5.61, light type 5.70 → 7.88, dark keyword 6.76 → 7.01).
+- **UX/UI polish pass.** Dark `tab.activeBorder` no longer floats off the editor background; light `editor.selectionBackground` switched to a low-alpha brand tint so selection is visible on white; light `editor.lineHighlightBackground` darkened one step; light explorer focus tinted with brand peach; dark `editorIndentGuide.background1` alpha doubled; minimap-modified marker now matches `gitDecoration` amber on both variants.
+- Marketplace `galleryBanner.color` now uses brand-tinted dark `#271002` (Primary 950) instead of the flat editor background.
+- README screenshots section now embeds Go / Markdown / JSON / HTML for both variants.
+
+### Migration
+
+- All 20+ ports regenerated from `source/`. Users see the new brand orange across every editor, terminal, and chat/notes target after upgrading.
+
 ## [1.0.3] - 2026-05-06
 
 ### Added

@@ -4,26 +4,26 @@
   "author": "Jackson Makinda",
   "editorScheme": "/themes/makinda-dark.icls",
   "colors": {
-    "brandPrimary": "#ff6b0d",
-    "brandHover": "#ff8d37",
+    "brandPrimary": "#ff711a",
+    "brandHover": "#ff9452",
     "bgEditor": "#0e0e0f",
     "bgSidebar": "#0e0e0f",
     "bgPanel": "#0e0e0f",
-    "bgInput": "#1e2022",
-    "bgElevated1": "#161618",
-    "bgElevated2": "#1e2022",
-    "bgElevated3": "#26282c",
-    "fgDefault": "#e7e8ea",
-    "fgMuted": "#969ba6",
-    "fgSubtle": "#6b7280",
+    "bgInput": "#27272a",
+    "bgElevated1": "#18181b",
+    "bgElevated2": "#27272a",
+    "bgElevated3": "#3f3f46",
+    "fgDefault": "#e4e4e7",
+    "fgMuted": "#a1a1aa",
+    "fgSubtle": "#71717a",
     "fgInverse": "#ffffff",
-    "borderDefault": "#1e2022",
-    "borderStrong": "#36393f",
-    "borderFocus": "#ff6b0d",
-    "stateError": "#ef4444",
+    "borderDefault": "#27272a",
+    "borderStrong": "#52525b",
+    "borderFocus": "#ff711a",
+    "stateError": "#f43f5e",
     "stateWarning": "#f59e0b",
     "stateInfo": "#3b82f6",
-    "stateSuccess": "#22c55e"
+    "stateSuccess": "#10b981"
   },
   "ui": {
     "*": {
@@ -98,7 +98,7 @@
       "activeForeground": "brandPrimary",
       "hoverForeground": "brandHover",
       "pressedForeground": "brandHover",
-      "visitedForeground": "#a78bfa"
+      "visitedForeground": "#a26ee2"
     },
     "MenuItem": {
       "selectionBackground": "bgElevated2",
@@ -106,15 +106,15 @@
       "acceleratorForeground": "fgMuted"
     },
     "Menu": {
-      "background": "#1e2022"
+      "background": "#27272a"
     },
     "PopupMenu": {
-      "background": "#1e2022"
+      "background": "#27272a"
     },
     "Notification": {
-      "background": "#1e2022",
+      "background": "#27272a",
       "borderColor": "borderDefault",
-      "errorBackground": "#1e2022",
+      "errorBackground": "#27272a",
       "errorBorderColor": "stateError",
       "errorForeground": "stateError"
     },
@@ -124,11 +124,11 @@
       "indeterminateEndColor": "brandHover"
     },
     "ScrollBar": {
-      "thumbColor": "#36393f",
-      "hoverThumbColor": "#6b7280",
+      "thumbColor": "#52525b",
+      "hoverThumbColor": "#71717a",
       "Mac": {
-        "thumbColor": "#36393f",
-        "hoverThumbColor": "#6b7280"
+        "thumbColor": "#52525b",
+        "hoverThumbColor": "#71717a"
       }
     },
     "Separator": {
@@ -198,7 +198,7 @@
       "background": "bgInput",
       "foreground": "fgDefault",
       "borderColor": "borderDefault",
-      "hoverBorderColor": "#36393f",
+      "hoverBorderColor": "#52525b",
       "focusedBorderColor": "brandPrimary"
     },
     "TextArea": {
@@ -207,14 +207,14 @@
       "selectionBackground": "bgElevated2"
     },
     "ToolTip": {
-      "background": "#1e2022",
+      "background": "#27272a",
       "foreground": "fgDefault",
       "borderColor": "borderDefault"
     },
     "ValidationTooltip": {
-      "errorBackground": "#1e2022",
+      "errorBackground": "#27272a",
       "errorBorderColor": "stateError",
-      "warningBackground": "#1e2022",
+      "warningBackground": "#27272a",
       "warningBorderColor": "stateWarning"
     },
     "VersionControl": {
