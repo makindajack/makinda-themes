@@ -123,7 +123,7 @@
       "name": "Comment Markup Link",
       "scope": "comment markup.link",
       "settings": {
-        "foreground": "#9ca3af"
+        "foreground": "#6b7280"
       }
     },
     {
@@ -1605,7 +1605,7 @@
       "name": "comments",
       "scope": ["beginning.punctuation.definition.list.markdown.xi"],
       "settings": {
-        "foreground": "#9ca3af"
+        "foreground": "#6b7280"
       }
     },
     {
@@ -1640,7 +1640,7 @@
       "name": "elements to dim",
       "scope": ["punctuation.definition.tag.xi"],
       "settings": {
-        "foreground": "#9ca3af"
+        "foreground": "#6b7280"
       }
     },
     {
@@ -1673,14 +1673,14 @@
       "scope": "comment, punctuation.definition.comment",
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#9ca3af"
+        "foreground": "#6b7280"
       }
     },
     {
       "name": "[VSCODE-CUSTOM] Markdown Quote",
       "scope": "markup.quote.markdown",
       "settings": {
-        "foreground": "#9ca3af"
+        "foreground": "#6b7280"
       }
     },
     {
@@ -1722,6 +1722,27 @@
       "scope": "markup.italic.markdown",
       "settings": {
         "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "TypeScript / JavaScript decorators",
+      "scope": [
+        "meta.decorator entity.name.function",
+        "meta.decorator variable.other.readwrite",
+        "meta.decorator punctuation.decorator",
+        "punctuation.decorator",
+        "meta.decorator.ts",
+        "meta.decorator.tsx"
+      ],
+      "settings": {
+        "foreground": "#ff8d37"
+      }
+    },
+    {
+      "name": "Go receiver type",
+      "scope": ["variable.parameter.receiver.go", "variable.other.receiver.go", "entity.name.type.receiver.go"],
+      "settings": {
+        "foreground": "#9e2f0e"
       }
     }
   ],
@@ -1875,21 +1896,21 @@
     "terminalCursor.foreground": "#f05106",
     "terminal.border": "#e7e8ea",
     "terminal.ansiBlack": "#36393f",
-    "terminal.ansiBlue": "#3b82f6",
+    "terminal.ansiBlue": "#2563eb",
     "terminal.ansiBrightBlack": "#6b7280",
     "terminal.ansiBrightBlue": "#60a5fa",
     "terminal.ansiBrightCyan": "#22d3ee",
     "terminal.ansiBrightGreen": "#22c55e",
     "terminal.ansiBrightMagenta": "#a855f7",
     "terminal.ansiBrightRed": "#f87171",
-    "terminal.ansiBrightWhite": "#f9f9fa",
+    "terminal.ansiBrightWhite": "#ffffff",
     "terminal.ansiBrightYellow": "#fbbf24",
     "terminal.ansiCyan": "#06b6d4",
     "terminal.ansiGreen": "#16a34a",
-    "terminal.ansiMagenta": "#8947db",
-    "terminal.ansiRed": "#ef4444",
-    "terminal.ansiWhite": "#f3f3f5",
-    "terminal.ansiYellow": "#f59e0b",
+    "terminal.ansiMagenta": "#7c3aed",
+    "terminal.ansiRed": "#dc2626",
+    "terminal.ansiWhite": "#e5e7eb",
+    "terminal.ansiYellow": "#d97706",
     "breadcrumb.background": "#ffffff",
     "breadcrumb.foreground": "#6b7280",
     "breadcrumb.focusForeground": "#c73b07",

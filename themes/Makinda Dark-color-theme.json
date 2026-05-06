@@ -123,7 +123,7 @@
       "name": "Comment Markup Link",
       "scope": "comment markup.link",
       "settings": {
-        "foreground": "#6b7280"
+        "foreground": "#7d8593"
       }
     },
     {
@@ -1605,7 +1605,7 @@
       "name": "comments",
       "scope": ["beginning.punctuation.definition.list.markdown.xi"],
       "settings": {
-        "foreground": "#6b7280"
+        "foreground": "#7d8593"
       }
     },
     {
@@ -1640,7 +1640,7 @@
       "name": "elements to dim",
       "scope": ["punctuation.definition.tag.xi"],
       "settings": {
-        "foreground": "#6b7280"
+        "foreground": "#7d8593"
       }
     },
     {
@@ -1673,14 +1673,14 @@
       "scope": "comment, punctuation.definition.comment",
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#6b7280"
+        "foreground": "#7d8593"
       }
     },
     {
       "name": "[VSCODE-CUSTOM] Markdown Quote",
       "scope": "markup.quote.markdown",
       "settings": {
-        "foreground": "#6b7280"
+        "foreground": "#7d8593"
       }
     },
     {
@@ -1722,6 +1722,27 @@
       "scope": "markup.italic.markdown",
       "settings": {
         "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "TypeScript / JavaScript decorators",
+      "scope": [
+        "meta.decorator entity.name.function",
+        "meta.decorator variable.other.readwrite",
+        "meta.decorator punctuation.decorator",
+        "punctuation.decorator",
+        "meta.decorator.ts",
+        "meta.decorator.tsx"
+      ],
+      "settings": {
+        "foreground": "#ffb770"
+      }
+    },
+    {
+      "name": "Go receiver type",
+      "scope": ["variable.parameter.receiver.go", "variable.other.receiver.go", "entity.name.type.receiver.go"],
+      "settings": {
+        "foreground": "#ff8d37"
       }
     }
   ],
@@ -1874,7 +1895,7 @@
     "terminalCursor.background": "#0e0e0f",
     "terminalCursor.foreground": "#ff6b0d",
     "terminal.border": "#1e2022",
-    "terminal.ansiBlack": "#36393f",
+    "terminal.ansiBlack": "#0e0e0f",
     "terminal.ansiBlue": "#60a5fa",
     "terminal.ansiBrightBlack": "#6b7280",
     "terminal.ansiBrightBlue": "#93c5fd",
@@ -1884,11 +1905,11 @@
     "terminal.ansiBrightRed": "#fca5a5",
     "terminal.ansiBrightWhite": "#ffffff",
     "terminal.ansiBrightYellow": "#fde68a",
-    "terminal.ansiCyan": "#22d3ee",
-    "terminal.ansiGreen": "#4ade80",
+    "terminal.ansiCyan": "#2dd4bf",
+    "terminal.ansiGreen": "#34d399",
     "terminal.ansiMagenta": "#a78bfa",
     "terminal.ansiRed": "#f87171",
-    "terminal.ansiWhite": "#e7e8ea",
+    "terminal.ansiWhite": "#e6e6e8",
     "terminal.ansiYellow": "#fbbf24",
     "breadcrumb.background": "#0e0e0f",
     "breadcrumb.foreground": "#6b7280",

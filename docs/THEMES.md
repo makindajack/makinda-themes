@@ -99,23 +99,25 @@ This document is the canonical color and token spec. Every editor port must deri
 
 ## Terminal ANSI
 
+The palette (`source/palette.json` → `variants.<variant>.ansi`) is the single source of truth. Keep this table in sync with it.
+
 | Slot            | Light     | Dark      |
 | --------------- | --------- | --------- |
-| `black`         | `#1f2024` | `#0e0e0f` |
+| `black`         | `#36393f` | `#0e0e0f` |
 | `red`           | `#dc2626` | `#f87171` |
-| `green`         | `#059669` | `#34d399` |
+| `green`         | `#16a34a` | `#34d399` |
 | `yellow`        | `#d97706` | `#fbbf24` |
 | `blue`          | `#2563eb` | `#60a5fa` |
 | `magenta`       | `#7c3aed` | `#a78bfa` |
-| `cyan`          | `#0d7377` | `#2dd4bf` |
+| `cyan`          | `#06b6d4` | `#2dd4bf` |
 | `white`         | `#e5e7eb` | `#e6e6e8` |
 | `brightBlack`   | `#6b7280` | `#6b7280` |
-| `brightRed`     | `#ef4444` | `#fca5a5` |
-| `brightGreen`   | `#10b981` | `#6ee7b7` |
-| `brightYellow`  | `#f59e0b` | `#fcd34d` |
-| `brightBlue`    | `#3b82f6` | `#93c5fd` |
-| `brightMagenta` | `#8b5cf6` | `#c4b5fd` |
-| `brightCyan`    | `#14b8a6` | `#5eead4` |
+| `brightRed`     | `#f87171` | `#fca5a5` |
+| `brightGreen`   | `#22c55e` | `#86efac` |
+| `brightYellow`  | `#fbbf24` | `#fde68a` |
+| `brightBlue`    | `#60a5fa` | `#93c5fd` |
+| `brightMagenta` | `#a855f7` | `#c4b5fd` |
+| `brightCyan`    | `#22d3ee` | `#67e8f9` |
 | `brightWhite`   | `#ffffff` | `#ffffff` |
 
 ## Contrast targets

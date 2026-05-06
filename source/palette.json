@@ -54,7 +54,7 @@
                 "string": "#2dd4bf",
                 "stringEscape": "#22d3ee",
                 "regex": "#22d3ee",
-                "comment": "#6b7280",
+                "comment": "#7d8593",
                 "variable": "#e7e8ea",
                 "variableSecondary": "#cfd2d6",
                 "parameter": "#ffb770",
@@ -69,7 +69,7 @@
                 "markupHeading": "#ff8d37",
                 "markupLink": "#22d3ee",
                 "markupCode": "#2dd4bf",
-                "markupQuote": "#6b7280"
+                "markupQuote": "#7d8593"
             },
             "state": {
                 "error": "#ef4444",
@@ -166,7 +166,7 @@
                 "string": "#0d7377",
                 "stringEscape": "#0891b2",
                 "regex": "#0891b2",
-                "comment": "#9ca3af",
+                "comment": "#6b7280",
                 "variable": "#1e2022",
                 "variableSecondary": "#26282c",
                 "parameter": "#ff8d37",
@@ -181,7 +181,7 @@
                 "markupHeading": "#f05106",
                 "markupLink": "#0891b2",
                 "markupCode": "#0d7377",
-                "markupQuote": "#9ca3af"
+                "markupQuote": "#6b7280"
             },
             "state": {
                 "error": "#ef4444",
