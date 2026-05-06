@@ -107,8 +107,8 @@ The Dark variant used to ship as the standalone extension `makindajack.makinda-d
 
 ## Phase 8 — Helix
 
-- [ ] Generate `ports/helix/makinda_light.toml`
-- [ ] Generate `ports/helix/makinda_dark.toml`
+- [x] Generate `ports/helix/makinda_light.toml`
+- [x] Generate `ports/helix/makinda_dark.toml`
 - [ ] Submit upstream PR to Helix's `runtime/themes/` directory
 
 ## Phase 9 — Terminals

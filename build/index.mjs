@@ -17,6 +17,7 @@ const ports = [
     "zed.mjs",
     "neovim.mjs",
     "xcode.mjs",
+    "helix.mjs",
     "alacritty.mjs",
     "kitty.mjs",
     "warp.mjs",
