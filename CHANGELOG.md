@@ -5,6 +5,20 @@ All notable changes to the "Makinda Themes" extension will be documented in this
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.3] - 2026-05-06
+
+### Added
+
+- Per-language preview screenshots (TypeScript, Go, Rust, Python, JSON, HTML, Markdown) for both Light and Dark, generated via Playwright + Shiki (`npm run screenshots`).
+- Multi-IDE release automation (`build/release.mjs`) that packages every editor port for distribution.
+- GitHub Actions workflow (`.github/workflows/release.yml`) that builds and attaches release artifacts on tag push.
+- Initial publishing flows for non-VS Code marketplaces (JetBrains, Sublime Package Control, Obsidian, Zed, BetterDiscord, Nova).
+
+### Changed
+
+- README rewritten with refreshed previews and a clearer multi-IDE install matrix.
+- `docs/IDES.md`, `docs/INSTALLATION.md`, and `docs/SCOPE.md` reorganised to reflect the current port roster.
+
 ## [1.0.2] - 2026-05-06
 
 ### Changed

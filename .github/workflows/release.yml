@@ -1,0 +1,61 @@
+name: release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install
+        run: npm ci || npm install
+
+      - name: Validate (strict)
+        run: npm run validate:strict
+
+      - name: Contrast check
+        run: npm run contrast
+
+      - name: Build all ports
+        run: npm run build
+
+      - name: Package VSIX
+        run: npx --yes @vscode/vsce package --no-dependencies --out makinda-themes.vsix
+
+      - name: Publish to VS Code Marketplace
+        if: ${{ env.VSCE_PAT != '' }}
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+        run: npx --yes @vscode/vsce publish --no-dependencies --packagePath makinda-themes.vsix
+
+      - name: Publish to Open VSX
+        if: ${{ env.OVSX_PAT != '' }}
+        env:
+          OVSX_PAT: ${{ secrets.OVSX_PAT }}
+        run: npx --yes ovsx publish makinda-themes.vsix -p "$OVSX_PAT"
+
+      - name: Bundle ports archive
+        run: |
+          mkdir -p dist
+          tar -czf dist/makinda-themes-ports-${GITHUB_REF_NAME}.tar.gz ports/
+          cp makinda-themes.vsix "dist/makinda-themes-${GITHUB_REF_NAME}.vsix"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: |
+            dist/*.vsix
+            dist/*.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

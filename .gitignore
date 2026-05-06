@@ -1,2 +1,14 @@
 node_modules
 *.vsix
+
+# JetBrains plugin Gradle build artifacts
+ports/jetbrains/build/
+ports/jetbrains/.gradle/
+ports/jetbrains/.idea/
+
+# Release tooling outputs
+dist/
+
+# OS / cache noise
+.cache/
+.DS_Store

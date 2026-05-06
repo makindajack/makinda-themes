@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.makindajack"
-version = "1.0.1"
+version = "1.0.3"
 
 repositories {
     mavenCentral()

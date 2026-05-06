@@ -23,10 +23,10 @@ import { dirname, join, resolve } from "node:path";
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, "..");
 
-let chromium, getHighlighter;
+let chromium, createHighlighter;
 try {
     ({ chromium } = await import("playwright"));
-    ({ getHighlighter } = await import("shiki"));
+    ({ createHighlighter } = await import("shiki"));
 } catch (err) {
     console.error("\nMissing peer deps. Install with:");
     console.error("  npm install --save-dev playwright shiki");
@@ -189,7 +189,7 @@ async function main() {
         ),
     };
 
-    const highlighter = await getHighlighter({
+    const highlighter = await createHighlighter({
         themes: [
             { ...themes.light, name: "makinda-light", type: "light" },
             { ...themes.dark, name: "makinda-dark", type: "dark" },

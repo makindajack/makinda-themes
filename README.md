@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-<h4 align="center">Premium light and dark themes for VS Code with warm orange accents and excellent readability.</h4>
+<h4 align="center">A premium light + dark theme family with warm orange accents — shipping to <strong>20+ editors, IDEs, terminals, and apps</strong> from a single source palette.</h4>
 
 <p align="center">
   <a href="https://marketplace.visualstudio.com/items?itemName=makindajack.makinda-themes">
@@ -76,16 +76,52 @@ code --install-extension makindajack.makinda-themes
 
 ## Compatible Editors
 
-Makinda Themes works in every editor that consumes the VS Code extension format. The same `.vsix` is published to both marketplaces:
+Makinda is generated from a single `source/palette.json` and ports to every major editor, IDE, terminal, and chat/notes app.
 
-| Editor                              | Marketplace                                                                                           | Install                                                   |
-| ----------------------------------- | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| **VS Code**                         | [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=makindajack.makinda-themes) | `code --install-extension makindajack.makinda-themes`     |
-| **Cursor**                          | VS Code Marketplace (or Open VSX)                                                                     | `cursor --install-extension makindajack.makinda-themes`   |
-| **Windsurf**                        | [Open VSX](https://open-vsx.org/extension/makindajack/makinda-themes)                                 | `windsurf --install-extension makindajack.makinda-themes` |
-| **VSCodium / code-server / Gitpod** | [Open VSX](https://open-vsx.org/extension/makindajack/makinda-themes)                                 | `codium --install-extension makindajack.makinda-themes`   |
+### Code editors & IDEs
 
-See [docs/INSTALLATION.md](docs/INSTALLATION.md) for editor-by-editor walkthroughs and offline `.vsix` install steps.
+| Editor              | Format                                  | Install                                                |
+| ------------------- | --------------------------------------- | ------------------------------------------------------ |
+| **VS Code**         | `*.color-theme.json`                    | `code --install-extension makindajack.makinda-themes`  |
+| **Cursor**          | (VS Code theme)                         | `cursor --install-extension makindajack.makinda-themes`|
+| **Windsurf**        | (Open VSX)                              | `windsurf --install-extension makindajack.makinda-themes` |
+| **VSCodium / code-server** | (Open VSX)                       | `codium --install-extension makindajack.makinda-themes`|
+| **JetBrains IDEs**  | `.icls` + `.theme.json`                 | [ports/jetbrains/](ports/jetbrains/)                   |
+| **Sublime Text**    | `.sublime-color-scheme`                 | [ports/sublime/](ports/sublime/)                       |
+| **Zed**             | Zed theme JSON                          | [ports/zed/](ports/zed/)                               |
+| **Neovim**          | Lua + Vim fallback                      | [ports/neovim/](ports/neovim/)                         |
+| **Xcode**           | `.xccolortheme` plist                   | [ports/xcode/](ports/xcode/)                           |
+| **Helix**           | TOML                                    | [ports/helix/](ports/helix/)                           |
+| **Visual Studio**   | `.vssettings`                           | [ports/visual-studio/](ports/visual-studio/)           |
+| **Eclipse**         | `.epf`                                  | [ports/eclipse/](ports/eclipse/)                       |
+| **Emacs**           | `deftheme` `.el`                        | [ports/emacs/](ports/emacs/)                           |
+| **TextMate**        | `.tmTheme` plist                        | [ports/textmate/](ports/textmate/)                     |
+| **BBEdit**          | `.bbcolors` plist                       | [ports/bbedit/](ports/bbedit/)                         |
+| **Nova**            | `.novaextension`                        | [ports/nova/](ports/nova/)                             |
+| **Lapce**           | TOML                                    | [ports/lapce/](ports/lapce/)                           |
+| **Notepad++**       | XML                                     | [ports/notepad-plus-plus/](ports/notepad-plus-plus/)   |
+
+### Terminals
+
+| Terminal             | Format                  | Path                                              |
+| -------------------- | ----------------------- | ------------------------------------------------- |
+| **iTerm2**           | `.itermcolors`          | [ports/iterm2/](ports/iterm2/)                    |
+| **Warp**             | YAML                    | [ports/warp/](ports/warp/)                        |
+| **Alacritty**        | TOML                    | [ports/alacritty/](ports/alacritty/)              |
+| **Kitty**            | `.conf`                 | [ports/kitty/](ports/kitty/)                      |
+| **WezTerm**          | Lua                     | [ports/wezterm/](ports/wezterm/)                  |
+| **Ghostty**          | config snippet          | [ports/ghostty/](ports/ghostty/)                  |
+| **Windows Terminal** | JSON snippet            | [ports/windows-terminal/](ports/windows-terminal/)|
+
+### Chat / notes
+
+| App                | Format          | Path                              |
+| ------------------ | --------------- | --------------------------------- |
+| **Slack**          | sidebar string  | [ports/slack/](ports/slack/)      |
+| **Discord** (BetterDiscord) | CSS    | [ports/discord/](ports/discord/)  |
+| **Obsidian**       | CSS theme       | [ports/obsidian/](ports/obsidian/)|
+
+See [docs/INSTALLATION.md](docs/INSTALLATION.md) for editor-by-editor walkthroughs and [docs/IDES.md](docs/IDES.md) for the full status matrix.
 
 ## Activate a Theme
 
@@ -133,15 +169,25 @@ Pair Makinda Themes with one of these for a complete look:
 
 ### Makinda Light
 
-![Makinda Light fragment](https://i.imgur.com/qxYdmP8.png)
-
-![Makinda Light full](https://i.imgur.com/LKLWRX7.png)
+<p align="center">
+  <img src="images/light-typescript.png" alt="Makinda Light — TypeScript" width="800">
+</p>
+<p align="center">
+  <img src="images/light-python.png" alt="Makinda Light — Python" width="400">
+  <img src="images/light-rust.png" alt="Makinda Light — Rust" width="400">
+</p>
 
 ### Makinda Dark
 
-![Makinda Dark fragment](https://i.imgur.com/FjuZtgU.png)
+<p align="center">
+  <img src="images/dark-typescript.png" alt="Makinda Dark — TypeScript" width="800">
+</p>
+<p align="center">
+  <img src="images/dark-python.png" alt="Makinda Dark — Python" width="400">
+  <img src="images/dark-rust.png" alt="Makinda Dark — Rust" width="400">
+</p>
 
-![Makinda Dark full](https://i.imgur.com/7JKkS0D.png)
+More: [Go](images/dark-go.png) · [Markdown](images/dark-markdown.png) · [JSON](images/dark-json.png) · [HTML](images/dark-html.png) (Light variants in [`images/`](images/)).
 
 ## Migrating from `makinda-dark`
 

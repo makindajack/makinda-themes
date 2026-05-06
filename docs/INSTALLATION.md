@@ -111,6 +111,45 @@ Download `makinda-themes-<version>.vsix` from [GitHub Releases](https://github.c
 
 > Tip: regardless of editor, you can enable OS-appearance auto-switching with `window.autoDetectColorScheme` + `workbench.preferredLightColorTheme: "Makinda Light"` + `workbench.preferredDarkColorTheme: "Makinda Dark"` in your settings.
 
+## Native Ports (non-VS-Code editors, terminals, apps)
+
+All ports live under [`ports/<editor>/`](../ports/) and are generated from the same palette.
+
+### IDEs / editors
+
+- **JetBrains** — [`ports/jetbrains/`](../ports/jetbrains/): `./gradlew buildPlugin`, then **Settings → Plugins → ⚙ → Install Plugin from Disk…**
+- **Sublime Text** — [`ports/sublime/`](../ports/sublime/): copy `.sublime-color-scheme` files into `Packages/User/`.
+- **Zed** — [`ports/zed/`](../ports/zed/): `zed --install-dev-extension ports/zed`.
+- **Neovim / Vim** — [`ports/neovim/`](../ports/neovim/): add `colors/` + `lua/` to runtimepath, then `:colorscheme makinda-dark` (or `-light`).
+- **Xcode** — [`ports/xcode/`](../ports/xcode/): copy `*.xccolortheme` into `~/Library/Developer/Xcode/UserData/FontAndColorThemes/`.
+- **Helix** — [`ports/helix/`](../ports/helix/): copy `*.toml` into `~/.config/helix/themes/`, then `:theme makinda_dark`.
+- **Visual Studio** — [`ports/visual-studio/`](../ports/visual-studio/): **Tools → Import and Export Settings…** → import `.vssettings`.
+- **Eclipse** — [`ports/eclipse/`](../ports/eclipse/): **File → Import → Preferences** → select `.epf`.
+- **Emacs** — [`ports/emacs/`](../ports/emacs/): drop `.el` into `custom-theme-load-path`, `M-x load-theme RET makinda-dark`.
+- **TextMate** — [`ports/textmate/`](../ports/textmate/): double-click `.tmTheme`.
+- **BBEdit** — [`ports/bbedit/`](../ports/bbedit/): copy `.bbcolors` into `~/Library/Application Support/BBEdit/Color Schemes/`.
+- **Nova** — [`ports/nova/`](../ports/nova/): double-click the `.novaextension` bundle.
+- **Lapce** — [`ports/lapce/`](../ports/lapce/): copy `.toml` to Lapce theme directory.
+- **Notepad++** — [`ports/notepad-plus-plus/`](../ports/notepad-plus-plus/): **Settings → Style Configurator → Import**.
+
+### Terminals
+
+- **iTerm2** — [`ports/iterm2/`](../ports/iterm2/): double-click `.itermcolors`, then **Profiles → Colors → Color Presets**.
+- **Warp** — [`ports/warp/`](../ports/warp/): copy YAML into `~/.warp/themes/`.
+- **Alacritty** — [`ports/alacritty/`](../ports/alacritty/): `import` the TOML in your `alacritty.toml`.
+- **Kitty** — [`ports/kitty/`](../ports/kitty/): `include makinda_dark.conf` in `~/.config/kitty/kitty.conf`.
+- **WezTerm** — [`ports/wezterm/`](../ports/wezterm/): `require` the Lua file in `wezterm.lua`.
+- **Ghostty** — [`ports/ghostty/`](../ports/ghostty/): copy file into `$XDG_CONFIG_HOME/ghostty/themes/`.
+- **Windows Terminal** — [`ports/windows-terminal/`](../ports/windows-terminal/): paste the JSON object into `schemes` in `settings.json`.
+
+### Apps
+
+- **Slack** — [`ports/slack/`](../ports/slack/): paste the comma-separated string into **Preferences → Themes → Custom**.
+- **Discord (BetterDiscord)** — [`ports/discord/`](../ports/discord/): drop the CSS file into BetterDiscord's themes folder.
+- **Obsidian** — [`ports/obsidian/`](../ports/obsidian/): copy folder into `.obsidian/themes/`, then **Settings → Appearance → Theme**.
+
+For build-from-source instructions and per-port architecture notes, see [DEVELOPMENT.md](DEVELOPMENT.md) and [IDES.md](IDES.md).
+
 ## Verifying Installation
 
 1. Open Command Palette (`Ctrl+Shift+P`)
