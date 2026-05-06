@@ -12,6 +12,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 
 const ports = [
     "vscode.mjs",
+    "jetbrains.mjs",
     "alacritty.mjs",
     "kitty.mjs",
     "warp.mjs",

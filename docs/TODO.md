@@ -62,13 +62,13 @@ The Dark variant used to ship as the standalone extension `makindajack.makinda-d
 
 ## Phase 3 — JetBrains
 
-- [ ] Scaffold `ports/jetbrains/` Gradle plugin project (`gradle-intellij-plugin`)
-- [ ] Generate `Makinda Light.icls` (editor color scheme) from source
-- [ ] Generate `Makinda Light.theme.json` (UI theme) from source
-- [ ] Same pair for Dark
-- [ ] Test in IntelliJ IDEA Community
-- [ ] Test in WebStorm, PyCharm, GoLand, RustRover, Rider, Android Studio
-- [ ] Write `plugin.xml` with both themes registered
+- [x] Scaffold `ports/jetbrains/` Gradle plugin project (`gradle-intellij-plugin`)
+- [x] Generate `Makinda Light.icls` (editor color scheme) from source
+- [x] Generate `Makinda Light.theme.json` (UI theme) from source
+- [x] Same pair for Dark
+- [x] Write `plugin.xml` with both themes registered
+- [ ] Test in IntelliJ IDEA Community (`./gradlew runIde`) — manual
+- [ ] Test in WebStorm, PyCharm, GoLand, RustRover, Rider, Android Studio — manual
 - [ ] Submit to JetBrains Marketplace
 
 ## Phase 4 — Sublime Text

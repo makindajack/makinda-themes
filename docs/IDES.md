@@ -10,7 +10,7 @@ Status legend: ✅ shipping · 🟡 in progress · ⏳ planned · 💤 backlog
 | **Cursor**               |   ✅   | (VS Code theme)                          | Drop-in compatible — uses the VS Code extension as-is.                                                               |
 | **Windsurf**             |   ✅   | (VS Code theme)                          | Drop-in compatible.                                                                                                  |
 | **VSCodium / Open VSX**  |   🟡   | `*.color-theme.json`                     | Same `.vsix`; needs Open VSX publish step.                                                                           |
-| **JetBrains IDEs**       |   ⏳   | `*.icls` + `*.theme.json`                | IntelliJ, WebStorm, PyCharm, GoLand, RustRover, Rider, RubyMine, PhpStorm, DataGrip, Android Studio, CLion, AppCode. |
+| **JetBrains IDEs**       |   🟡   | `*.icls` + `*.theme.json`                | IntelliJ, WebStorm, PyCharm, GoLand, RustRover, Rider, RubyMine, PhpStorm, DataGrip, Android Studio, CLion, AppCode. |
 | **Sublime Text**         |   ⏳   | `*.sublime-color-scheme`                 | JSON format; distribute via Package Control.                                                                         |
 | **Zed**                  |   ⏳   | `*.json` (Zed theme schema)              | Publish via Zed extensions registry.                                                                                 |
 | **Neovim**               |   ⏳   | Lua colorscheme (`lua/makinda/init.lua`) | Treesitter + LSP highlight groups; optional `vim` colorscheme fallback.                                              |

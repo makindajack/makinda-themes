@@ -72,6 +72,7 @@
     "check": "npm run validate:strict && npm run contrast",
     "build": "node build/index.mjs",
     "build:vscode": "node build/vscode.mjs",
+    "build:jetbrains": "node build/jetbrains.mjs",
     "build:alacritty": "node build/alacritty.mjs",
     "build:kitty": "node build/kitty.mjs",
     "build:warp": "node build/warp.mjs",

@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>com.makindajack.makinda-themes</id>
+    <name>Makinda Themes</name>
+    <vendor email="jacksonmakinda@outlook.com" url="https://github.com/makindajack">Jackson Makinda</vendor>
+
+    <description><![CDATA[
+        Premium light and dark themes for JetBrains IDEs with warm orange accents and excellent readability.
+        <br><br>
+        Ships <b>Makinda Light</b> and <b>Makinda Dark</b>, both generated from the same source-of-truth palette
+        used by the VS Code, Sublime, Zed, and terminal ports of the Makinda theme family.
+        <br><br>
+        Works in IntelliJ IDEA, WebStorm, PyCharm, GoLand, RustRover, Rider, PhpStorm, RubyMine, and Android Studio.
+    ]]>    </description>
+
+    <change-notes><![CDATA[
+        <h3>1.0.0</h3>
+        <ul>
+            <li>Initial release: Makinda Light and Makinda Dark.</li>
+        </ul>
+    ]]>    </change-notes>
+
+    <idea-version since-build="223" />
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <themeProvider id="makinda-light" path="/themes/makinda-light.theme.json" />
+        <themeProvider id="makinda-dark" path="/themes/makinda-dark.theme.json" />
+    </extensions>
+</idea-plugin>

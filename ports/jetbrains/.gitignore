@@ -1,0 +1,13 @@
+# Gradle
+.gradle/
+build/
+out/
+
+# IntelliJ project files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# IntelliJ sandbox produced by runIde
+sandbox/
