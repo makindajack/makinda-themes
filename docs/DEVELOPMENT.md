@@ -1,6 +1,6 @@
 # Development Guide
 
-This guide covers how to develop and test the Makinda Light theme locally.
+This guide covers how to develop and test the Makinda Themes extension locally.
 
 ## Prerequisites
 
@@ -11,11 +11,14 @@ This guide covers how to develop and test the Makinda Light theme locally.
 ## Project Structure
 
 ```
-makinda-light/
+makinda-themes/
 ├── themes/
-│   └── Makinda Light-color-theme.json  # Main theme definition
+│   ├── Makinda Light-color-theme.json  # Light theme definition
+│   └── Makinda Dark-color-theme.json   # Dark theme definition
 ├── images/
-│   └── icon.png                         # Extension icon
+│   ├── icon.png                         # Extension icon
+│   ├── icon-light.png                   # Light variant icon
+│   └── icon-dark.png                    # Dark variant icon
 ├── docs/
 │   ├── PUBLISHING.md                    # Publishing guide
 │   ├── CONTRIBUTING.md                  # Contribution guidelines
@@ -31,8 +34,8 @@ makinda-light/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/makindajack/makinda-light.git
-cd makinda-light
+git clone https://github.com/makindajack/makinda-themes.git
+cd makinda-themes
 ```
 
 ### Open in VS Code
@@ -175,12 +178,12 @@ npm install -g @vscode/vsce
 vsce package
 ```
 
-Creates `makinda-light-X.X.X.vsix`
+Creates `makinda-themes-X.X.X.vsix`
 
 ### Test Package
 
 ```bash
-code --install-extension makinda-light-1.0.0.vsix
+code --install-extension makinda-themes-1.0.0.vsix
 ```
 
 ## Useful Resources

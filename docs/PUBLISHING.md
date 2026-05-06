@@ -1,6 +1,6 @@
 # Publishing Guide
 
-This guide explains how to build and publish the Makinda Light theme to the VS Code Marketplace.
+This guide explains how to build and publish the Makinda Themes extension to the VS Code Marketplace.
 
 ## Prerequisites
 
@@ -36,13 +36,13 @@ npm install -g @vscode/vsce
 
 ```bash
 # Navigate to the extension directory
-cd /Users/makindajack/Downloads/01.GitHub/makinda-light
+cd /Users/makindajack/Downloads/01.GitHub/makinda-themes
 
 # Package the extension (creates .vsix file)
 vsce package
 ```
 
-This creates `makinda-light-1.0.0.vsix` in the project root.
+This creates `makinda-themes-1.0.0.vsix` in the project root.
 
 ### Test the Package Locally
 
@@ -50,7 +50,7 @@ Before publishing, test the packaged extension:
 
 ```bash
 # Install the .vsix file
-code --install-extension makinda-light-1.0.0.vsix
+code --install-extension makinda-themes-1.0.0.vsix
 ```
 
 Then restart VS Code and activate the theme to verify everything works.
@@ -88,7 +88,7 @@ vsce publish 1.0.0
 
 ## Post-Publishing Checklist
 
-- [ ] Verify the extension appears on the [Marketplace](https://marketplace.visualstudio.com/items?itemName=makindajack.makinda-light)
+- [ ] Verify the extension appears on the [Marketplace](https://marketplace.visualstudio.com/items?itemName=makindajack.makinda-themes)
 - [ ] Check that the README renders correctly
 - [ ] Verify the icon and gallery banner display properly
 - [ ] Test installation from the marketplace
@@ -130,7 +130,7 @@ Run `vsce ls` to see which files will be included, and check for:
 
 ```bash
 # Show extension info
-vsce show makindajack.makinda-light
+vsce show makindajack.makinda-themes
 
 # List files that will be packaged
 vsce ls

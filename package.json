@@ -1,8 +1,8 @@
 {
-  "name": "makinda-light",
-  "displayName": "Makinda Light",
-  "description": "A premium light theme for VS Code with warm orange accents and excellent readability",
-  "version": "1.0.0",
+  "name": "makinda-themes",
+  "displayName": "Makinda Themes",
+  "description": "Premium light and dark themes for VS Code with warm orange accents and excellent readability",
+  "version": "1.0.1",
   "publisher": "makindajack",
   "icon": "images/icon.png",
   "author": {
@@ -10,22 +10,26 @@
     "email": "jacksonmakinda@outlook.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/makindajack/makinda-light#readme",
+  "homepage": "https://github.com/makindajack/makinda-themes#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/makindajack/makinda-light"
+    "url": "https://github.com/makindajack/makinda-themes"
   },
   "bugs": {
-    "url": "https://github.com/makindajack/makinda-light/issues",
+    "url": "https://github.com/makindajack/makinda-themes/issues",
     "email": "jacksonmakinda@outlook.com"
   },
   "keywords": [
     "theme",
     "light",
+    "dark",
     "light theme",
+    "dark theme",
     "orange",
     "makinda",
     "makinda light",
+    "makinda dark",
+    "makinda themes",
     "makindajack",
     "jackson makinda",
     "color theme",
@@ -39,8 +43,8 @@
     "Themes"
   ],
   "galleryBanner": {
-    "color": "#ffffff",
-    "theme": "light"
+    "color": "#0e0e0f",
+    "theme": "dark"
   },
   "contributes": {
     "themes": [
@@ -48,6 +52,11 @@
         "label": "Makinda Light",
         "uiTheme": "vs",
         "path": "./themes/Makinda Light-color-theme.json"
+      },
+      {
+        "label": "Makinda Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Makinda Dark-color-theme.json"
       }
     ]
   },

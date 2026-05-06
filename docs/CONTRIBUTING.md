@@ -1,6 +1,6 @@
-# Contributing to Makinda Light
+# Contributing to Makinda Themes
 
-Thank you for your interest in contributing to Makinda Light! This document provides guidelines for contributing to this project.
+Thank you for your interest in contributing to Makinda Themes! This document provides guidelines for contributing to this project.
 
 ## Code of Conduct
 
@@ -12,7 +12,7 @@ By participating in this project, you agree to maintain a respectful and inclusi
 
 If you find a bug or have a suggestion:
 
-1. Check [existing issues](https://github.com/makindajack/makinda-light/issues) to avoid duplicates
+1. Check [existing issues](https://github.com/makindajack/makinda-themes/issues) to avoid duplicates
 2. Open a new issue with a clear title and description
 3. Include:
    - VS Code version
@@ -46,8 +46,8 @@ See [DEVELOPMENT.md](DEVELOPMENT.md) for detailed setup instructions.
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/makinda-light.git
-cd makinda-light
+git clone https://github.com/YOUR_USERNAME/makinda-themes.git
+cd makinda-themes
 
 # Open in VS Code
 code .

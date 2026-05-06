@@ -1,28 +1,29 @@
 <h1 align="center">
   <br>
-  <img src="images/icon.png" alt="Makinda Light" width="128">
+  <img src="images/icon.png" alt="Makinda Themes" width="128">
   <br>
-  Makinda Light
+  Makinda Themes
   <br>
 </h1>
 
-<h4 align="center">A premium light theme for VS Code with warm orange accents and excellent readability.</h4>
+<h4 align="center">Premium light and dark themes for VS Code with warm orange accents and excellent readability.</h4>
 
 <p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=makindajack.makinda-light">
-    <img alt="Version" src="https://img.shields.io/vscode-marketplace/v/makindajack.makinda-light.svg?style=for-the-badge&labelColor=f9f9fa&color=f05106">
+  <a href="https://marketplace.visualstudio.com/items?itemName=makindajack.makinda-themes">
+    <img alt="Version" src="https://img.shields.io/visual-studio-marketplace/v/makindajack.makinda-themes.svg?style=for-the-badge&labelColor=0e0e0f&color=f05106">
   </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=makindajack.makinda-light">
-    <img alt="Downloads" src="https://img.shields.io/visual-studio-marketplace/d/makindajack.makinda-light.svg?style=for-the-badge&labelColor=f9f9fa&color=f05106">
+  <a href="https://marketplace.visualstudio.com/items?itemName=makindajack.makinda-themes">
+    <img alt="Downloads" src="https://img.shields.io/visual-studio-marketplace/d/makindajack.makinda-themes.svg?style=for-the-badge&labelColor=0e0e0f&color=f05106">
   </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=makindajack.makinda-light">
-    <img alt="Rating" src="https://img.shields.io/visual-studio-marketplace/stars/makindajack.makinda-light.svg?style=for-the-badge&labelColor=f9f9fa&color=f05106">
+  <a href="https://marketplace.visualstudio.com/items?itemName=makindajack.makinda-themes">
+    <img alt="Rating" src="https://img.shields.io/visual-studio-marketplace/stars/makindajack.makinda-themes.svg?style=for-the-badge&labelColor=0e0e0f&color=f05106">
   </a>
 </p>
 
 <p align="center">
   <a href="#features">Features</a> •
   <a href="#installation">Installation</a> •
+  <a href="#activate-a-theme">Activate</a> •
   <a href="#recommended-settings">Recommended Settings</a> •
   <a href="#screenshots">Screenshots</a> •
   <a href="#contributing">Contributing</a> •
@@ -33,53 +34,75 @@
 
 ## Features
 
-- **Premium Design** — Clean white editor with subtle gray sidebars for a professional look
-- **Brand Colors** — Carefully curated orange accent palette for a warm, inviting feel
-- **Excellent Readability** — High contrast syntax highlighting optimized for long coding sessions
-- **Comprehensive Coverage** — Full support for UI elements, syntax tokens, and semantic highlighting
-- **Status Indicators** — Color-coded status bar for errors, warnings, and debugging states
+This extension ships **two** complementary themes:
+
+- **Makinda Light** — Clean white editor with subtle gray sidebars, warm orange accents, and high-contrast syntax highlighting for long, comfortable coding sessions.
+- **Makinda Dark** — Deep `#0e0e0f` background with vibrant orange accents, purple types, and teal strings. 140+ token scopes and 200+ UI color definitions.
+
+Both variants share the same brand language, so switching between them keeps your code visually consistent.
 
 ### Color Palette
 
-| Element            | Color | Hex       |
-| ------------------ | ----- | --------- |
-| Brand Orange       | 🟠    | `#f05106` |
-| Deep Orange        | 🟠    | `#c73b07` |
-| Purple Accent      | 🟣    | `#7c3aed` |
-| Teal Strings       | 🔵    | `#0d7377` |
-| Editor Background  | ⬜    | `#ffffff` |
-| Sidebar Background | ⬜    | `#f9f9fa` |
+| Element            | Makinda Light | Makinda Dark |
+| ------------------ | ------------- | ------------ |
+| Brand Orange       | `#f05106`     | `#ff6b0d`    |
+| Functions          | `#f05106`     | `#ff8d37`    |
+| Keywords           | `#c73b07`     | `#ff6b0d`    |
+| Types / Classes    | `#7c3aed`     | `#a78bfa`    |
+| Strings            | `#0d7377`     | `#2dd4bf`    |
+| Comments           | `#9ca3af`     | `#6b7280`    |
+| Editor Background  | `#ffffff`     | `#0e0e0f`    |
+| Sidebar Background | `#f9f9fa`     | `#161618`    |
 
 ## Installation
 
 ### From VS Code Marketplace
 
-1. Open **Extensions** sidebar panel: `View → Extensions`
-2. Search for `Makinda Light`
+1. Open the **Extensions** sidebar: `View → Extensions`
+2. Search for `Makinda Themes`
 3. Click **Install**
-4. Go to `Code → Preferences → Color Theme → Makinda Light`
 
 ### From Command Line
 
 ```bash
-code --install-extension makindajack.makinda-light
+code --install-extension makindajack.makinda-themes
 ```
 
 ### Manual Installation
 
-1. Download the latest `.vsix` file from [Releases](https://github.com/makindajack/makinda-light/releases)
-2. Open VS Code
-3. Run `Extensions: Install from VSIX...` from the Command Palette
-4. Select the downloaded file
+1. Download the latest `.vsix` from [Releases](https://github.com/makindajack/makinda-themes/releases)
+2. In VS Code, run `Extensions: Install from VSIX...` from the Command Palette and pick the file.
+
+## Activate a Theme
+
+Open the Color Theme picker:
+
+- macOS: `⌘K ⌘T`
+- Windows / Linux: `Ctrl+K Ctrl+T`
+
+Select **Makinda Light** or **Makinda Dark**.
+
+To have VS Code switch automatically with your OS appearance, enable `window.autoDetectColorScheme` and set:
+
+```json
+{
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredLightColorTheme": "Makinda Light",
+  "workbench.preferredDarkColorTheme": "Makinda Dark"
+}
+```
 
 ## Recommended Settings
 
 ### Icon Themes
 
-For the best experience, we recommend pairing Makinda Light with:
+Pair Makinda Themes with one of these for a complete look:
 
-- [Nomo Dark Icon Theme](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-icontheme-nomo-light) by be5invis
 - [Material Product Icons](https://marketplace.visualstudio.com/items?itemName=PKief.material-product-icons) by Philipp Kief
+- [Nomo Light Icon Theme](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-icontheme-nomo-light) — pairs well with Makinda Light
+- [Nomo Dark Icon Theme](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-icontheme-nomo-dark) — pairs well with Makinda Dark
+
+> A dedicated **Makinda Icons** pack is in active development and will be released as a separate extension.
 
 ### Font Recommendations
 
@@ -94,9 +117,29 @@ For the best experience, we recommend pairing Makinda Light with:
 
 ## Screenshots
 
-![Screenshot example fragment](https://i.imgur.com/qxYdmP8.png)
+### Makinda Light
 
-![Screenshot example full](https://i.imgur.com/LKLWRX7.png)
+![Makinda Light fragment](https://i.imgur.com/qxYdmP8.png)
+
+![Makinda Light full](https://i.imgur.com/LKLWRX7.png)
+
+### Makinda Dark
+
+![Makinda Dark fragment](https://i.imgur.com/FjuZtgU.png)
+
+![Makinda Dark full](https://i.imgur.com/7JKkS0D.png)
+
+## Migrating from `makinda-dark`
+
+The standalone `makindajack.makinda-dark` extension is deprecated as of `1.0.1`. Both themes are now bundled in `makindajack.makinda-themes`.
+
+To migrate:
+
+1. Install `makindajack.makinda-themes`.
+2. Uninstall `makindajack.makinda-dark`.
+3. Open the Color Theme picker and re-select **Makinda Dark**.
+
+Your settings and theme preference will be preserved.
 
 ## Documentation
 
@@ -107,7 +150,7 @@ For the best experience, we recommend pairing Makinda Light with:
 
 ## Contributing
 
-Contributions are welcome! Please read our [Contributing Guide](docs/CONTRIBUTING.md) for details.
+Contributions are welcome. Please read the [Contributing Guide](docs/CONTRIBUTING.md) before opening issues or pull requests.
 
 ## License
 

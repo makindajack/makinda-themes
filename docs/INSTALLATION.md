@@ -1,6 +1,6 @@
 # Installation Guide
 
-This guide covers all methods for installing the Makinda Light theme.
+This guide covers all methods for installing the Makinda Themes extension.
 
 ## Prerequisites
 
@@ -18,21 +18,21 @@ This guide covers all methods for installing the Makinda Light theme.
    - Or click the Extensions icon in the Activity Bar
 
 3. **Search for Theme**
-   - Type `Makinda Light` in the search box
+   - Type `Makinda Themes` in the search box
    - Look for the extension by **Jackson Makinda**
 
 4. **Install**
    - Click the **Install** button
 
-5. **Activate Theme**
+5. **Activate a Theme**
    - Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (macOS)
    - Type `Color Theme`
-   - Select **Makinda Light**
+   - Select **Makinda Light** or **Makinda Dark**
 
 ### Method 2: Quick Open
 
 1. Press `Ctrl+P` (Windows/Linux) or `Cmd+P` (macOS)
-2. Paste: `ext install makindajack.makinda-light`
+2. Paste: `ext install makindajack.makinda-themes`
 3. Press Enter
 
 ### Method 3: VSIX File
@@ -42,7 +42,7 @@ For offline installation or pre-release versions:
 ```bash
 # Download the .vsix file from GitHub releases
 # Then install via command line:
-code --install-extension makinda-light-1.0.0.vsix
+code --install-extension makinda-themes-1.0.0.vsix
 ```
 
 Or in VS Code:
@@ -55,10 +55,10 @@ Or in VS Code:
 
 ```bash
 # Clone the repository
-git clone https://github.com/makindajack/makinda-light.git
+git clone https://github.com/makindajack/makinda-themes.git
 
 # Open in VS Code
-code makinda-light
+code makinda-themes
 
 # Press F5 to launch Extension Development Host
 # The theme will be available in the new window
@@ -68,7 +68,7 @@ code makinda-light
 
 1. Open Command Palette (`Ctrl+Shift+P`)
 2. Type `Color Theme`
-3. You should see **Makinda Light** in the list
+3. You should see both **Makinda Light** and **Makinda Dark** in the list
 
 ## Recommended Companion Extensions
 
@@ -124,10 +124,10 @@ Add these to your `settings.json` for optimal experience:
 
    ```bash
    # Windows
-   rd /s /q %USERPROFILE%\.vscode\extensions\makindajack.makinda-light-*
+   rd /s /q %USERPROFILE%\.vscode\extensions\makindajack.makinda-themes-*
 
    # macOS/Linux
-   rm -rf ~/.vscode/extensions/makindajack.makinda-light-*
+   rm -rf ~/.vscode/extensions/makindajack.makinda-themes-*
    ```
 
 3. Reinstall the extension
@@ -141,10 +141,10 @@ Add these to your `settings.json` for optimal experience:
 Or via command line:
 
 ```bash
-code --uninstall-extension makindajack.makinda-light
+code --uninstall-extension makindajack.makinda-themes
 ```
 
 ## Getting Help
 
-- [GitHub Issues](https://github.com/makindajack/makinda-light/issues)
+- [GitHub Issues](https://github.com/makindajack/makinda-themes/issues)
 - [Email Support](mailto:jacksonmakinda@outlook.com)
