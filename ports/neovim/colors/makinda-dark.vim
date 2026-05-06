@@ -25,7 +25,7 @@ hi Pmenu guifg=#e4e4e7 ctermfg=254 guibg=#27272a ctermbg=235 gui=NONE cterm=NONE
 hi PmenuSel guifg=#e4e4e7 ctermfg=254 guibg=#27272a ctermbg=235 gui=bold cterm=bold
 hi Visual guifg=NONE ctermfg=NONE guibg=#27272a ctermbg=235 gui=NONE cterm=NONE
 hi Search guifg=#e4e4e7 ctermfg=254 guibg=#27272a ctermbg=235 gui=NONE cterm=NONE
-hi IncSearch guifg=#ffffff ctermfg=231 guibg=#ff711a ctermbg=202 gui=NONE cterm=NONE
+hi IncSearch guifg=#0e0e0f ctermfg=233 guibg=#ff711a ctermbg=202 gui=NONE cterm=NONE
 hi MatchParen guifg=#ff711a ctermfg=202 guibg=NONE ctermbg=NONE gui=bold,underline cterm=bold,underline
 hi Folded guifg=#a1a1aa ctermfg=248 guibg=#18181b ctermbg=234 gui=NONE cterm=NONE
 hi Comment guifg=#7d8593 ctermfg=102 guibg=NONE ctermbg=NONE gui=italic cterm=italic

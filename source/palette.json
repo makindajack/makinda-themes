@@ -30,7 +30,7 @@
                 "muted": "#a1a1aa",
                 "subtle": "#71717a",
                 "disabled": "#52525b",
-                "inverse": "#ffffff"
+                "inverse": "#0e0e0f"
             },
             "border": {
                 "default": "#27272a",
@@ -185,9 +185,9 @@
             },
             "state": {
                 "error": "#f43f5e",
-                "errorStrong": "#f43f5e",
+                "errorStrong": "#be123c",
                 "warning": "#f59e0b",
-                "warningStrong": "#d97706",
+                "warningStrong": "#b45309",
                 "info": "#3b82f6",
                 "infoStrong": "#2563eb",
                 "success": "#10b981",

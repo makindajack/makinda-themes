@@ -280,7 +280,7 @@
     {
       "name": "Invalid",
       "scope": "invalid, invalid.illegal",
-      "foreground": "#ffffff",
+      "foreground": "#0e0e0f",
       "background": "var(error)"
     },
     {

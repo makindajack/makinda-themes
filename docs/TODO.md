@@ -173,8 +173,9 @@ Closed out by `1.1.0` — palette realigned to [`source/design-tokens.json`](../
 - [x] Dark `editorIndentGuide.background1` alpha doubled (`40` → `80`).
 - [x] `minimapGutter.modifiedBackground` now matches `gitDecoration` amber on both variants.
 - [x] Brand & neutral realignment to design system (Primary, Secondary, Neutral=zinc, Success=emerald, Error=rose).
+- [x] Dark `button.foreground` / `badge.foreground` / `statusBarItem.{prominent,remote,warning}Foreground` switched from white to `#0e0e0f` — button on orange now passes AA at 7.01 : 1 (was 2.75).
+- [x] Light `gitDecoration.*` foregrounds bumped to 700 shades (`#047857` / `#b45309` / `#be123c`) so they pass AA on the light sidebar.
 - [ ] Sidebar / activity-bar elevation step on dark — deferred. Current single-surface look is intentional minimalism; revisit if user feedback says otherwise.
-- [ ] `gitDecoration.*` AA audit on light sidebar — deferred. The amber/green decorations are status icons (decorative), not body text.
 
 ### Marketplace / README
 

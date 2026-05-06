@@ -5,7 +5,7 @@
     <key>name</key>
     <string>Makinda Dark</string>
     <key>uuid</key>
-    <string>EFF1328F-C24A-464F-9996-EAF19F3473B6</string>
+    <string>A463A54C-EB1B-48C3-9ABA-22B33778ADD2</string>
     <key>author</key>
     <string>Jackson Makinda</string>
     <key>colorSpaceName</key>
@@ -406,7 +406,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#FFFFFF</string>
+                    <string>#0E0E0F</string>
                     <key>background</key>
                     <string>#F43F5E</string>
                 </dict>

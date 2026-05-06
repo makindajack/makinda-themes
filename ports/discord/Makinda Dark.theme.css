@@ -63,11 +63,11 @@
 
     /* Status */
     --status-positive-background: #10b981;
-    --status-positive-text: #ffffff;
+    --status-positive-text: #0e0e0f;
     --status-warning-background: #f59e0b;
-    --status-warning-text: #ffffff;
+    --status-warning-text: #0e0e0f;
     --status-danger-background: #f43f5e;
-    --status-danger-text: #ffffff;
+    --status-danger-text: #0e0e0f;
 
     /* Scrollbars */
     --scrollbar-thin-thumb: #52525b;

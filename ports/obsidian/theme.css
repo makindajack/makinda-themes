@@ -17,7 +17,7 @@
     --background-modifier-active-hover: #f4f4f5;
     --background-modifier-success: #10b981;
     --background-modifier-error: #f43f5e;
-    --background-modifier-error-hover: #f43f5e;
+    --background-modifier-error-hover: #be123c;
     --background-modifier-error-rgb: 239, 68, 68;
     --background-modifier-cover: rgba(0, 0, 0, 0.5);
     --interactive-normal: #3f3f46;
@@ -30,7 +30,7 @@
     --text-faint: #71717a;
     --text-on-accent: #ffffff;
     --text-error: #f43f5e;
-    --text-error-hover: #f43f5e;
+    --text-error-hover: #be123c;
     --text-highlight-bg: #f8d5bf66;
     --text-highlight-bg-active: #b34400;
     --text-selection: #f4f4f5;
@@ -114,7 +114,7 @@
     --text-normal: #e4e4e7;
     --text-muted: #a1a1aa;
     --text-faint: #71717a;
-    --text-on-accent: #ffffff;
+    --text-on-accent: #0e0e0f;
     --text-error: #f43f5e;
     --text-error-hover: #fb7185;
     --text-highlight-bg: #80310066;

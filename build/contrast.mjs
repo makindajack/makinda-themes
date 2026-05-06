@@ -51,8 +51,9 @@ const checks = [
     { label: "sidebar text on sidebar", fg: "fg.default", bg: "bg.sidebar", min: 4.5 },
     { label: "muted on sidebar", fg: "fg.muted", bg: "bg.sidebar", min: 4.5 },
     { label: "status bar text", fg: "fg.muted", bg: "bg.editor", min: 3.0 },
-    // Button text on the brand orange is decorative UI text. Dark variant lands
-    // at 2.85 — kept advisory so the audit tracks it without blocking.
+    // Button text on the brand orange. Light uses white-on-orange (3.65 : 1,
+    // accepted as decorative AA-large 3.0 — see docs/SCOPE.md). Dark uses
+    // dark-on-orange for full AA (7.01 : 1).
     { label: "inverse on brand (button)", fg: "fg.inverse", bg: "brand.primary", min: 3.0, advisory: true },
 ];
 

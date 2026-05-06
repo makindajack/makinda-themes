@@ -17,12 +17,12 @@
         <WidgetStyle name="Fold active" styleID="0" fgColor="FF711A" bgColor="0E0E0F" fontStyle="0" />
         <WidgetStyle name="Fold margin" styleID="0" fgColor="27272A" bgColor="0E0E0F" fontStyle="0" />
         <WidgetStyle name="White space symbol" styleID="0" fgColor="52525B" bgColor="0E0E0F" fontStyle="0" />
-        <WidgetStyle name="Mark Style 1" styleID="0" fgColor="FFFFFF" bgColor="F43F5E" fontStyle="0" />
-        <WidgetStyle name="Mark Style 2" styleID="0" fgColor="FFFFFF" bgColor="F59E0B" fontStyle="0" />
-        <WidgetStyle name="Mark Style 3" styleID="0" fgColor="FFFFFF" bgColor="FF711A" fontStyle="0" />
-        <WidgetStyle name="Mark Style 4" styleID="0" fgColor="FFFFFF" bgColor="10B981" fontStyle="0" />
-        <WidgetStyle name="Mark Style 5" styleID="0" fgColor="FFFFFF" bgColor="3B82F6" fontStyle="0" />
-        <WidgetStyle name="Find Mark Style" styleID="0" fgColor="FFFFFF" bgColor="FF711A" fontStyle="0" />
+        <WidgetStyle name="Mark Style 1" styleID="0" fgColor="0E0E0F" bgColor="F43F5E" fontStyle="0" />
+        <WidgetStyle name="Mark Style 2" styleID="0" fgColor="0E0E0F" bgColor="F59E0B" fontStyle="0" />
+        <WidgetStyle name="Mark Style 3" styleID="0" fgColor="0E0E0F" bgColor="FF711A" fontStyle="0" />
+        <WidgetStyle name="Mark Style 4" styleID="0" fgColor="0E0E0F" bgColor="10B981" fontStyle="0" />
+        <WidgetStyle name="Mark Style 5" styleID="0" fgColor="0E0E0F" bgColor="3B82F6" fontStyle="0" />
+        <WidgetStyle name="Find Mark Style" styleID="0" fgColor="0E0E0F" bgColor="FF711A" fontStyle="0" />
         <WidgetStyle name="Smart Highlighting" styleID="0" fgColor="E4E4E7" bgColor="27272A" fontStyle="0" />
         <WidgetStyle name="Tags match highlighting" styleID="0" fgColor="FF711A" bgColor="27272A" fontStyle="1" />
         <WidgetStyle name="Tags attribute" styleID="0" fgColor="F3B995" bgColor="0E0E0F" fontStyle="0" />

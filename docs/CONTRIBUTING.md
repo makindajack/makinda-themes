@@ -70,15 +70,15 @@ When proposing color changes:
 
 | Category      | Color     | Hex       |
 | ------------- | --------- | --------- |
-| Brand Orange  | Primary   | `#f05106` |
-| Brand Orange  | Dark      | `#c73b07` |
-| Brand Orange  | Light     | `#ff6b0d` |
-| Accent Purple | Primary   | `#7c3aed` |
+| Brand Orange  | Primary   | `#e65800` |
+| Brand Orange  | Dark      | `#b34400` |
+| Brand Orange  | Light     | `#ff711a` |
+| Accent Purple | Primary   | `#6b26c0` |
 | Accent Purple | Dark      | `#7231bf` |
 | Background    | Editor    | `#ffffff` |
-| Background    | Sidebar   | `#f9f9fa` |
-| Text          | Primary   | `#1e2022` |
-| Text          | Secondary | `#6b7280` |
+| Background    | Sidebar   | `#fafafa` |
+| Text          | Primary   | `#27272a` |
+| Text          | Secondary | `#71717a` |
 
 ### Commit Messages
 
