@@ -1,0 +1,20 @@
+Makinda Themes
+==============
+
+Thanks for installing Makinda Themes — a premium pair of light and dark color
+schemes with warm orange accents and excellent readability.
+
+Activate a scheme:
+
+    Preferences > Select Color Scheme...
+        - Makinda Light
+        - Makinda Dark
+
+Or set in Preferences.sublime-settings:
+
+    {
+        "color_scheme": "Packages/Makinda Themes/Makinda Dark.sublime-color-scheme"
+    }
+
+Source: https://github.com/makindajack/makinda-themes
+Issues: https://github.com/makindajack/makinda-themes/issues

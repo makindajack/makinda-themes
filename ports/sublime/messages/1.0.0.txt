@@ -1,0 +1,10 @@
+Makinda Themes 1.0.0
+====================
+
+Initial Package Control release of Makinda Themes for Sublime Text.
+
+Includes:
+  - Makinda Light
+  - Makinda Dark
+
+Activate via: Preferences > Select Color Scheme...

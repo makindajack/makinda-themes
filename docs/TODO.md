@@ -73,10 +73,10 @@ The Dark variant used to ship as the standalone extension `makindajack.makinda-d
 
 ## Phase 4 — Sublime Text
 
-- [ ] Scaffold `ports/sublime/`
-- [ ] Generate `Makinda Light.sublime-color-scheme` from source
-- [ ] Generate Dark variant
-- [ ] Add `messages.json` and `package.json` for Package Control
+- [x] Scaffold `ports/sublime/`
+- [x] Generate `Makinda Light.sublime-color-scheme` from source
+- [x] Generate Dark variant
+- [x] Add `messages.json` and `package.json` for Package Control
 - [ ] Submit to Package Control
 
 ## Phase 5 — Zed

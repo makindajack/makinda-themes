@@ -1,0 +1,23 @@
+{
+    "name": "Makinda Themes",
+    "description": "Premium light and dark color schemes for Sublime Text with warm orange accents and excellent readability.",
+    "version": "1.0.0",
+    "author": "Jackson Makinda",
+    "license": "MIT",
+    "homepage": "https://github.com/makindajack/makinda-themes",
+    "issues": "https://github.com/makindajack/makinda-themes/issues",
+    "labels": [
+        "color scheme",
+        "theme",
+        "light",
+        "dark",
+        "orange"
+    ],
+    "platforms": [
+        "*"
+    ],
+    "st_versions": [
+        3,
+        4
+    ]
+}
