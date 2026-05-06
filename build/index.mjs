@@ -14,6 +14,7 @@ const ports = [
     "vscode.mjs",
     "jetbrains.mjs",
     "sublime.mjs",
+    "zed.mjs",
     "alacritty.mjs",
     "kitty.mjs",
     "warp.mjs",

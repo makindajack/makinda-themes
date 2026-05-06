@@ -1,0 +1,7 @@
+id = "makinda-themes"
+name = "Makinda Themes"
+description = "Premium light and dark themes for Zed with warm orange accents and excellent readability."
+version = "1.0.0"
+schema_version = 1
+authors = ["Jackson Makinda <jacksonmakinda@outlook.com>"]
+repository = "https://github.com/makindajack/makinda-themes"

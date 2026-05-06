@@ -81,8 +81,8 @@ The Dark variant used to ship as the standalone extension `makindajack.makinda-d
 
 ## Phase 5 — Zed
 
-- [ ] Scaffold `ports/zed/extension.toml`
-- [ ] Generate `themes/makinda.json` containing both variants
+- [x] Scaffold `ports/zed/extension.toml`
+- [x] Generate `themes/makinda.json` containing both variants
 - [ ] Test in Zed
 - [ ] Submit to Zed extension registry
 
