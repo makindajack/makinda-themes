@@ -176,6 +176,14 @@ Pair Makinda Themes with one of these for a complete look:
   <img src="images/light-python.png" alt="Makinda Light — Python" width="400">
   <img src="images/light-rust.png" alt="Makinda Light — Rust" width="400">
 </p>
+<p align="center">
+  <img src="images/light-go.png" alt="Makinda Light — Go" width="400">
+  <img src="images/light-markdown.png" alt="Makinda Light — Markdown" width="400">
+</p>
+<p align="center">
+  <img src="images/light-json.png" alt="Makinda Light — JSON" width="400">
+  <img src="images/light-html.png" alt="Makinda Light — HTML" width="400">
+</p>
 
 ### Makinda Dark
 
@@ -186,8 +194,14 @@ Pair Makinda Themes with one of these for a complete look:
   <img src="images/dark-python.png" alt="Makinda Dark — Python" width="400">
   <img src="images/dark-rust.png" alt="Makinda Dark — Rust" width="400">
 </p>
-
-More: [Go](images/dark-go.png) · [Markdown](images/dark-markdown.png) · [JSON](images/dark-json.png) · [HTML](images/dark-html.png) (Light variants in [`images/`](images/)).
+<p align="center">
+  <img src="images/dark-go.png" alt="Makinda Dark — Go" width="400">
+  <img src="images/dark-markdown.png" alt="Makinda Dark — Markdown" width="400">
+</p>
+<p align="center">
+  <img src="images/dark-json.png" alt="Makinda Dark — JSON" width="400">
+  <img src="images/dark-html.png" alt="Makinda Dark — HTML" width="400">
+</p>
 
 ## Migrating from `makinda-dark`
 

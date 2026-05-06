@@ -160,4 +160,32 @@ Other:
 
 ---
 
+## Phase 11 — UX/UI polish pass (2026-05)
+
+Surfaced by an end-to-end UX/UI audit of the shipped JSON + marketplace presentation.
+
+### Theme JSON fixes (palette + generated)
+
+- [x] Dark `tab.activeBorder` is `#1e2022` against `#0e0e0f` backgrounds — visible mid-air line. Match `bg.editor` so only the orange `tab.activeBorderTop` carries the indicator.
+- [x] Light `editor.selectionBackground` `#ffecd466` is barely visible on white — bump alpha (`a0`+) or switch to a low-alpha `brand.primaryHover` tint.
+- [x] Light `editor.lineHighlightBackground` `#f9f9fa` ≈ sidebar bg — active line is invisible. Darken one step or add a subtle border.
+- [x] Light `list.activeSelectionBackground` is flat grey — add a low-alpha brand tint so the focused explorer item reads as branded.
+- [x] Dark `editorIndentGuide.background1` `#36393f40` (25% alpha) is effectively invisible on `#0e0e0f` — raise alpha or use a lighter base.
+- [x] Unify "modified" color between `gitDecoration.modifiedResourceForeground` (amber `#f59e0b`) and `minimapGutter.modifiedBackground` (blue `#3b82f6`) — pick one signal.
+- [ ] Add a 1-step elevation between editor / sidebar / activity bar (currently all `#0e0e0f`) so spatial hierarchy is visible. Either tint sidebar to `bg.elevated1` or strengthen `border.default`.
+- [ ] Audit `gitDecoration.*` and `gitDecoration.addedResourceForeground` `#22c55e` against the light sidebar — both fail AA as foreground text.
+
+### Marketplace / README
+
+- [x] `package.json` `galleryBanner.color` is `#0e0e0f` — the marketplace listing header has zero brand presence. Switch to a brand-tinted dark (e.g. `#1a0d05`).
+- [x] README "Screenshots" section only embeds TS/Python/Rust but [`images/`](../images/) ships Go/Markdown/JSON/HTML for both variants — embed the missing ones instead of linking only to dark variants.
+- [ ] Re-shoot all screenshots via `npm run screenshots` so they all share Fira Code 14 / line-height 1.6 / 1600×1000 (already tracked as a manual checklist in Phase 1 — keep, don't duplicate).
+
+### Process
+
+- [ ] After each batch of palette edits, run `npm run check` (validate + contrast) and `npm run build` to regenerate every port. Do not hand-edit `themes/*.json`.
+- [ ] Bump patch version + changelog entry once the batch lands.
+
+---
+
 **Next up:** Phase 1 wrap (publish to Open VSX, marketplace migration, screenshots), then Phase 2+.
