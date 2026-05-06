@@ -59,7 +59,7 @@ cd /Users/makindajack/Downloads/01.GitHub/makinda-themes
 vsce package
 ```
 
-This creates `makinda-themes-1.0.0.vsix` in the project root.
+This creates `makinda-themes-1.0.2.vsix` in the project root.
 
 ### Test the Package Locally
 
@@ -67,7 +67,7 @@ Before publishing, test the packaged extension:
 
 ```bash
 # Install the .vsix file
-code --install-extension makinda-themes-1.0.0.vsix
+code --install-extension makinda-themes-1.0.2.vsix
 ```
 
 Then restart VS Code and activate the theme to verify everything works.
@@ -102,6 +102,42 @@ vsce publish 1.0.0
 2. Go to [Marketplace Publisher Portal](https://marketplace.visualstudio.com/manage)
 3. Click on your extension
 4. Click **Update** and upload the `.vsix` file
+
+## Publishing to Open VSX
+
+[Open VSX](https://open-vsx.org) is the open marketplace consumed by VSCodium, Cursor, Windsurf, Gitpod, and most VS Code forks. We mirror the same `.vsix` there.
+
+### 1. Install ovsx
+
+```bash
+npm install -g ovsx
+```
+
+### 2. Create a publisher namespace + token
+
+1. Sign in to <https://open-vsx.org> with the GitHub account that owns the project.
+2. Open the user menu → **Settings** → **Namespaces** and claim `makindajack` (must match the `publisher` field in `package.json`).
+3. Generate an access token under **Settings** → **Access Tokens** and copy it once.
+
+### 3. Publish
+
+```bash
+# One-time login (token is read from $OVSX_PAT or stdin)
+export OVSX_PAT=<your-token>
+
+# Publish the .vsix that vsce already produced
+ovsx publish makinda-themes-1.0.2.vsix
+```
+
+Or in one shot:
+
+```bash
+ovsx publish -p $OVSX_PAT
+```
+
+After it succeeds, verify the listing at <https://open-vsx.org/extension/makindajack/makinda-themes>.
+
+> Tip: keep the VS Code Marketplace and Open VSX versions in lockstep — publish to both right after `vsce publish`.
 
 ## Post-Publishing Checklist
 

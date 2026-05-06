@@ -26,17 +26,31 @@ Status legend: `[ ]` not started · `[~]` in progress · `[x]` done
 - [x] Fix Light theme `editorLineNumber.activeForeground` so the current line is unambiguous — already strong (`#1e2022` active vs `#cfd2d6` inactive)
 - [x] Verify Dark theme `terminal.ansi*` slots match [THEMES.md](THEMES.md) ANSI table — reconciled palette ↔ theme ↔ spec; palette is canonical
 - [x] Add semantic token coverage for: TypeScript decorators, Rust lifetimes, Python `self`, Go receiver types
-- [ ] Add screenshots to `images/` for: TS, Python, Rust, Go, Markdown, JSON, HTML/JSX
-- [ ] Publish to **Open VSX** (mirror of VS Code Marketplace) so VSCodium / Cursor / Windsurf users get auto-updates
+- [x] Document OS-appearance auto-switching in the README (`window.autoDetectColorScheme` + preferred light/dark)
+- [x] Add Open VSX publishing flow to [PUBLISHING.md](PUBLISHING.md) so VSCodium / Cursor / Windsurf get auto-updates
+- [ ] Add screenshots to `images/` for: TS, Python, Rust, Go, Markdown, JSON, HTML/JSX (manual capture — see checklist below)
+- [x] Run `vsce publish` (Marketplace) and `ovsx publish` (Open VSX) for `1.0.2`
+
+### Screenshot capture checklist (manual)
+
+Capture each at 1600×1000 with the same window chrome and font (Fira Code 14, line height 1.6):
+
+- [ ] `images/light-typescript.png` and `images/dark-typescript.png` — a real `.tsx` file with imports, a class, decorators, JSX
+- [ ] `images/light-python.png` / `images/dark-python.png` — class with type hints, `self`, decorators, f-strings
+- [ ] `images/light-rust.png` / `images/dark-rust.png` — struct + impl, lifetimes, attributes
+- [ ] `images/light-go.png` / `images/dark-go.png` — receiver methods, struct tags, error handling
+- [ ] `images/light-markdown.png` / `images/dark-markdown.png` — headings, code fences, links, lists
+- [ ] `images/light-json.png` / `images/dark-json.png` — package.json or similar nested structure
+- [ ] `images/light-html.png` / `images/dark-html.png` — HTML/JSX with attributes
 
 ### Marketplace migration (`makinda-dark` → `makinda-themes`)
 
 The Dark variant used to ship as the standalone extension `makindajack.makinda-dark`. Now that both variants live together in `makindajack.makinda-themes`, the old listing has to be retired. See [PUBLISHING.md → Migrating from `makinda-dark`](PUBLISHING.md#migrating-from-makinda-dark-one-time) for steps.
 
-- [ ] Push a final `makinda-dark` patch release whose README points users to `makinda-themes` (optional but friendly)
-- [ ] **Unpublish `makindajack.makinda-dark`** from the VS Code Marketplace (publisher portal)
-- [ ] Confirm only `makinda-themes` is listed at <https://marketplace.visualstudio.com/publishers/makindajack>
-- [ ] Publish the latest `makinda-themes` (after build script lands) to VS Code Marketplace and Open VSX
+- [x] Push a final `makinda-dark` patch release whose README points users to `makinda-themes` (optional but friendly)
+- [x] **Unpublish `makindajack.makinda-dark`** from the VS Code Marketplace (publisher portal)
+- [x] Confirm only `makinda-themes` is listed at <https://marketplace.visualstudio.com/publishers/makindajack>
+- [x] Publish the latest `makinda-themes` (after build script lands) to VS Code Marketplace and Open VSX
 - [ ] Update marketplace README screenshots to show both Light and Dark
 
 ## Phase 2 — Adjacent VS Code ecosystem

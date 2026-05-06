@@ -50,9 +50,9 @@ Both variants share the same brand language, so switching between them keeps you
 | Keywords           | `#c73b07`     | `#ff6b0d`    |
 | Types / Classes    | `#7c3aed`     | `#a78bfa`    |
 | Strings            | `#0d7377`     | `#2dd4bf`    |
-| Comments           | `#9ca3af`     | `#6b7280`    |
+| Comments           | `#6b7280`     | `#7d8593`    |
 | Editor Background  | `#ffffff`     | `#0e0e0f`    |
-| Sidebar Background | `#f9f9fa`     | `#161618`    |
+| Sidebar Background | `#f9f9fa`     | `#0e0e0f`    |
 
 ## Installation
 

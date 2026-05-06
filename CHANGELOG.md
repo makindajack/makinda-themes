@@ -5,6 +5,25 @@ All notable changes to the "Makinda Themes" extension will be documented in this
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2] - 2026-05-06
+
+### Changed
+
+- **Comment colors lifted for WCAG AA compliance.** Light comments `#9ca3af` → `#6b7280` (4.83 : 1 against the editor background, was 2.54). Dark comments `#6b7280` → `#7d8593` (5.19 : 1, was 3.99).
+- Reconciled the terminal ANSI table across the palette, theme JSONs, and `docs/THEMES.md` so every editor and terminal port draws from a single source of truth.
+
+### Added
+
+- TypeScript / JavaScript decorator semantic-token coverage (`meta.decorator.*`, `punctuation.decorator`).
+- Go receiver-type semantic-token coverage (`variable.parameter.receiver.go`, etc.).
+- Source-of-truth pipeline under `source/` + `build/`: palette, tokens, validator, contrast audit, and per-editor port generators (Alacritty, Kitty, Warp, Windows Terminal, iTerm2, plus a VS Code regenerator).
+- `npm run check` (validate + contrast) wired into `vscode:prepublish`.
+
+### Documentation
+
+- Documented OS-appearance auto-switching via `window.autoDetectColorScheme` in the README.
+- Phase 1 of the multi-IDE roadmap completed (see `docs/TODO.md`).
+
 ## [1.0.1] - 2026-05-06
 
 ### Changed
