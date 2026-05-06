@@ -62,19 +62,19 @@ The VS Code port lives at the repo root (so the `.vsix` packages directly from `
 
 ## Distribution
 
-| Target                              | Channel                                                                                |
-| ----------------------------------- | -------------------------------------------------------------------------------------- |
-| VS Code / Cursor / Windsurf         | [Visual Studio Marketplace](https://marketplace.visualstudio.com) + Open VSX           |
-| JetBrains IDEs                      | [JetBrains Marketplace](https://plugins.jetbrains.com)                                 |
-| Sublime Text                        | Package Control                                                                        |
-| Zed                                 | Zed Extensions registry                                                                |
-| Neovim / Vim                        | GitHub repo + lazy.nvim/packer/Packer install                                          |
-| Xcode                               | GitHub repo + manual install (`~/Library/Developer/Xcode/UserData/FontAndColorThemes`) |
-| Helix / Lapce / Emacs               | GitHub repo + per-editor install path                                                  |
-| Visual Studio / Eclipse / Notepad++ | GitHub repo + import via editor settings UI                                            |
-| Nova / BBEdit / TextMate            | GitHub repo (macOS)                                                                    |
-| Terminals (iTerm2/Warp/Alacritty/Kitty/WezTerm/Ghostty/Windows Terminal) | GitHub repo `ports/<editor>` direct download |
-| Slack / Discord / Obsidian          | GitHub repo `ports/<app>` snippet/CSS                                                  |
+| Target                                                                   | Channel                                                                                |
+| ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
+| VS Code / Cursor / Windsurf                                              | [Visual Studio Marketplace](https://marketplace.visualstudio.com) + Open VSX           |
+| JetBrains IDEs                                                           | [JetBrains Marketplace](https://plugins.jetbrains.com)                                 |
+| Sublime Text                                                             | Package Control                                                                        |
+| Zed                                                                      | Zed Extensions registry                                                                |
+| Neovim / Vim                                                             | GitHub repo + lazy.nvim/packer/Packer install                                          |
+| Xcode                                                                    | GitHub repo + manual install (`~/Library/Developer/Xcode/UserData/FontAndColorThemes`) |
+| Helix / Lapce / Emacs                                                    | GitHub repo + per-editor install path                                                  |
+| Visual Studio / Eclipse / Notepad++                                      | GitHub repo + import via editor settings UI                                            |
+| Nova / BBEdit / TextMate                                                 | GitHub repo (macOS)                                                                    |
+| Terminals (iTerm2/Warp/Alacritty/Kitty/WezTerm/Ghostty/Windows Terminal) | GitHub repo `ports/<editor>` direct download                                           |
+| Slack / Discord / Obsidian                                               | GitHub repo `ports/<app>` snippet/CSS                                                  |
 
 ## Versioning
 

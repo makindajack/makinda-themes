@@ -80,46 +80,46 @@ Makinda is generated from a single `source/palette.json` and ports to every majo
 
 ### Code editors & IDEs
 
-| Editor              | Format                                  | Install                                                |
-| ------------------- | --------------------------------------- | ------------------------------------------------------ |
-| **VS Code**         | `*.color-theme.json`                    | `code --install-extension makindajack.makinda-themes`  |
-| **Cursor**          | (VS Code theme)                         | `cursor --install-extension makindajack.makinda-themes`|
-| **Windsurf**        | (Open VSX)                              | `windsurf --install-extension makindajack.makinda-themes` |
-| **VSCodium / code-server** | (Open VSX)                       | `codium --install-extension makindajack.makinda-themes`|
-| **JetBrains IDEs**  | `.icls` + `.theme.json`                 | [ports/jetbrains/](ports/jetbrains/)                   |
-| **Sublime Text**    | `.sublime-color-scheme`                 | [ports/sublime/](ports/sublime/)                       |
-| **Zed**             | Zed theme JSON                          | [ports/zed/](ports/zed/)                               |
-| **Neovim**          | Lua + Vim fallback                      | [ports/neovim/](ports/neovim/)                         |
-| **Xcode**           | `.xccolortheme` plist                   | [ports/xcode/](ports/xcode/)                           |
-| **Helix**           | TOML                                    | [ports/helix/](ports/helix/)                           |
-| **Visual Studio**   | `.vssettings`                           | [ports/visual-studio/](ports/visual-studio/)           |
-| **Eclipse**         | `.epf`                                  | [ports/eclipse/](ports/eclipse/)                       |
-| **Emacs**           | `deftheme` `.el`                        | [ports/emacs/](ports/emacs/)                           |
-| **TextMate**        | `.tmTheme` plist                        | [ports/textmate/](ports/textmate/)                     |
-| **BBEdit**          | `.bbcolors` plist                       | [ports/bbedit/](ports/bbedit/)                         |
-| **Nova**            | `.novaextension`                        | [ports/nova/](ports/nova/)                             |
-| **Lapce**           | TOML                                    | [ports/lapce/](ports/lapce/)                           |
-| **Notepad++**       | XML                                     | [ports/notepad-plus-plus/](ports/notepad-plus-plus/)   |
+| Editor                     | Format                  | Install                                                   |
+| -------------------------- | ----------------------- | --------------------------------------------------------- |
+| **VS Code**                | `*.color-theme.json`    | `code --install-extension makindajack.makinda-themes`     |
+| **Cursor**                 | (VS Code theme)         | `cursor --install-extension makindajack.makinda-themes`   |
+| **Windsurf**               | (Open VSX)              | `windsurf --install-extension makindajack.makinda-themes` |
+| **VSCodium / code-server** | (Open VSX)              | `codium --install-extension makindajack.makinda-themes`   |
+| **JetBrains IDEs**         | `.icls` + `.theme.json` | [ports/jetbrains/](ports/jetbrains/)                      |
+| **Sublime Text**           | `.sublime-color-scheme` | [ports/sublime/](ports/sublime/)                          |
+| **Zed**                    | Zed theme JSON          | [ports/zed/](ports/zed/)                                  |
+| **Neovim**                 | Lua + Vim fallback      | [ports/neovim/](ports/neovim/)                            |
+| **Xcode**                  | `.xccolortheme` plist   | [ports/xcode/](ports/xcode/)                              |
+| **Helix**                  | TOML                    | [ports/helix/](ports/helix/)                              |
+| **Visual Studio**          | `.vssettings`           | [ports/visual-studio/](ports/visual-studio/)              |
+| **Eclipse**                | `.epf`                  | [ports/eclipse/](ports/eclipse/)                          |
+| **Emacs**                  | `deftheme` `.el`        | [ports/emacs/](ports/emacs/)                              |
+| **TextMate**               | `.tmTheme` plist        | [ports/textmate/](ports/textmate/)                        |
+| **BBEdit**                 | `.bbcolors` plist       | [ports/bbedit/](ports/bbedit/)                            |
+| **Nova**                   | `.novaextension`        | [ports/nova/](ports/nova/)                                |
+| **Lapce**                  | TOML                    | [ports/lapce/](ports/lapce/)                              |
+| **Notepad++**              | XML                     | [ports/notepad-plus-plus/](ports/notepad-plus-plus/)      |
 
 ### Terminals
 
-| Terminal             | Format                  | Path                                              |
-| -------------------- | ----------------------- | ------------------------------------------------- |
-| **iTerm2**           | `.itermcolors`          | [ports/iterm2/](ports/iterm2/)                    |
-| **Warp**             | YAML                    | [ports/warp/](ports/warp/)                        |
-| **Alacritty**        | TOML                    | [ports/alacritty/](ports/alacritty/)              |
-| **Kitty**            | `.conf`                 | [ports/kitty/](ports/kitty/)                      |
-| **WezTerm**          | Lua                     | [ports/wezterm/](ports/wezterm/)                  |
-| **Ghostty**          | config snippet          | [ports/ghostty/](ports/ghostty/)                  |
-| **Windows Terminal** | JSON snippet            | [ports/windows-terminal/](ports/windows-terminal/)|
+| Terminal             | Format         | Path                                               |
+| -------------------- | -------------- | -------------------------------------------------- |
+| **iTerm2**           | `.itermcolors` | [ports/iterm2/](ports/iterm2/)                     |
+| **Warp**             | YAML           | [ports/warp/](ports/warp/)                         |
+| **Alacritty**        | TOML           | [ports/alacritty/](ports/alacritty/)               |
+| **Kitty**            | `.conf`        | [ports/kitty/](ports/kitty/)                       |
+| **WezTerm**          | Lua            | [ports/wezterm/](ports/wezterm/)                   |
+| **Ghostty**          | config snippet | [ports/ghostty/](ports/ghostty/)                   |
+| **Windows Terminal** | JSON snippet   | [ports/windows-terminal/](ports/windows-terminal/) |
 
 ### Chat / notes
 
-| App                | Format          | Path                              |
-| ------------------ | --------------- | --------------------------------- |
-| **Slack**          | sidebar string  | [ports/slack/](ports/slack/)      |
-| **Discord** (BetterDiscord) | CSS    | [ports/discord/](ports/discord/)  |
-| **Obsidian**       | CSS theme       | [ports/obsidian/](ports/obsidian/)|
+| App                         | Format         | Path                               |
+| --------------------------- | -------------- | ---------------------------------- |
+| **Slack**                   | sidebar string | [ports/slack/](ports/slack/)       |
+| **Discord** (BetterDiscord) | CSS            | [ports/discord/](ports/discord/)   |
+| **Obsidian**                | CSS theme      | [ports/obsidian/](ports/obsidian/) |
 
 See [docs/INSTALLATION.md](docs/INSTALLATION.md) for editor-by-editor walkthroughs and [docs/IDES.md](docs/IDES.md) for the full status matrix.
 
