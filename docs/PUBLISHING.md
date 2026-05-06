@@ -1,199 +1,352 @@
-# Publishing Guide
+# Publishing Runbook
 
-This guide explains how to build and publish the Makinda Themes extension to the VS Code Marketplace.
+This is the per-release workflow for shipping **Makinda Themes** to every marketplace it lives on. Follow it top-to-bottom for any new version.
 
-## Migrating from `makinda-dark` (one-time)
+If this is your first time, read [§ One-time setup](#one-time-setup) first to create accounts, generate tokens, and seed first-time-only marketplace listings. Subsequent releases skip straight to [§ Per-release workflow](#per-release-workflow).
 
-The standalone `makindajack.makinda-dark` extension is **deprecated** — Dark now ships inside `makindajack.makinda-themes` together with Light.
+---
 
-To complete the migration on the Marketplace:
+## Where the themes live
 
-1. **Sign in** to <https://marketplace.visualstudio.com/manage/publishers/makindajack> with the publisher account.
-2. Open the **`makinda-dark`** extension row.
-3. Click the **`…`** menu → **Unpublish** (or **Remove**) the extension. Unpublishing hides it from search and prevents new installs; existing installs are not auto-removed.
-4. Optionally, before unpublishing, push a final patch release of `makinda-dark` whose README points users to `makinda-themes`. Skip this if you've already done it.
-5. Verify `makindajack.makinda-themes` is the only listing under your publisher: <https://marketplace.visualstudio.com/publishers/makindajack>.
-6. Do the same on **Open VSX** if/when published there.
+| Tier | Marketplace | Mechanism | First time | Updates |
+|---|---|---|---|---|
+| 1 | **VS Code Marketplace** | `vsce publish` | publisher account | seconds |
+| 1 | **Open VSX** (VSCodium / Cursor / Windsurf) | `ovsx publish` | namespace claim | seconds |
+| 1 | **JetBrains Marketplace** | `gradle publishPlugin` | manual zip upload | minutes |
+| 2 | **Sublime Package Control** | PR to `sublimehq/package_control_channel` | one PR | tag a new release |
+| 2 | **Obsidian community themes** | PR to `obsidianmd/obsidian-releases` | one PR | tag a new release |
+| 2 | **Zed extensions** | PR to `zed-industries/extensions` | one PR + CLA | bump submodule + version |
+| 3 | **BetterDiscord** | Web upload at <https://betterdiscord.app/developers> | account | manual upload |
+| 3 | **Visual Studio Marketplace** (full VS) | Web upload | publisher account | manual upload |
+| 3 | **Eclipse Marketplace** | Web form | account | manual upload |
+| 3 | **Nova Extensions** | `nova extension publish` | Panic ID + Nova app | CLI |
+| — | **Terminals** (Alacritty, Kitty, Warp, iTerm2, WezTerm, Ghostty, Windows Terminal, Helix, Lapce) | No marketplace | n/a | committed in [ports/](../ports) — users pull from GitHub |
+| — | **Other** (Slack, Emacs, Neovim, Xcode, TextMate, BBEdit, Notepad++, Eclipse EPF, Discord, Visual Studio settings, Nova) | Distributed via the [GitHub release](https://github.com/makindajack/makinda-themes/releases) | n/a | re-tag the release |
 
-> Note: Marketplace also exposes a "Deprecate" flag (`extensionPack`/`obsolete` field). For our case `Unpublish` is the cleanest action since the Dark theme has been folded into another extension.
+The repos that anchor the marketplace listings:
 
-After this is done, tick the corresponding item in [TODO.md](TODO.md).
+| Repo | Marketplace |
+|---|---|
+| [makindajack/makinda-themes](https://github.com/makindajack/makinda-themes) | source-of-truth + VS Code + JetBrains |
+| [makindajack/makinda-sublime](https://github.com/makindajack/makinda-sublime) | Package Control |
+| [makindajack/makinda-obsidian](https://github.com/makindajack/makinda-obsidian) | Obsidian themes |
+| [makindajack/makinda-zed](https://github.com/makindajack/makinda-zed) | Zed extensions |
 
-## Prerequisites
+> ⚠️ The standalone repos exist because Package Control, Obsidian, and Zed each require the manifest at the **root of a dedicated repo**. Don't merge them back into the monorepo.
 
-### 1. Install vsce (Visual Studio Code Extension Manager)
+---
 
-```bash
-npm install -g @vscode/vsce
-```
+## One-time setup
 
-### 2. Create a Publisher Account
+Skip if you've published before.
 
-1. Go to [Visual Studio Marketplace Publisher Management](https://marketplace.visualstudio.com/manage)
-2. Sign in with your Microsoft account
-3. Create a publisher if you don't have one (publisher ID: `makindajack`)
+### Tokens
 
-### 3. Create a Personal Access Token (PAT)
+Generate each token once, then store in your password manager. **Never commit a token. Never paste a token into a file in this repo.**
 
-1. Go to [Azure DevOps](https://dev.azure.com/)
-2. Sign in with the same Microsoft account
-3. Click on **User Settings** (gear icon) → **Personal access tokens**
-4. Click **New Token**
-5. Configure the token:
-   - **Name**: `vsce-publishing` (or any name)
-   - **Organization**: Select **All accessible organizations**
-   - **Scopes**: Click **Custom defined**, then select:
-     - **Marketplace** → **Manage**
-   - **Expiration**: Set as needed (max 1 year)
-6. Click **Create** and copy the token immediately (you won't see it again)
+#### `VSCE_PAT` — VS Code Marketplace
 
-## Building the Extension
+1. <https://dev.azure.com> → sign in with the Microsoft account that owns the `makindajack` Marketplace publisher.
+2. Avatar → **Personal access tokens** → **+ New Token**.
+3. Name `vsce-publish-makinda-themes`, **Organization: All accessible organizations**, expiration 1 year.
+4. **Custom defined** scopes → **Marketplace → Manage**.
+5. Create. Copy once.
+6. Verify the publisher exists at <https://marketplace.visualstudio.com/manage/publishers/makindajack>.
 
-### Package the Extension
+#### `OVSX_PAT` — Open VSX
 
-```bash
-# Navigate to the extension directory
-cd /Users/makindajack/Downloads/01.GitHub/makinda-themes
+1. <https://open-vsx.org> → sign in with GitHub (`makindajack`).
+2. Avatar → **Settings → Namespaces** → claim `makindajack`.
+3. **Settings → Access Tokens** → **Generate New Token** → copy once.
 
-# Package the extension (creates .vsix file)
-vsce package
-```
+#### `JETBRAINS_PUBLISH_TOKEN` — JetBrains Marketplace
 
-This creates `makinda-themes-1.0.2.vsix` in the project root.
+1. <https://plugins.jetbrains.com> → sign in.
+2. **First time only:** upload `ports/jetbrains/build/distributions/makinda-themes-<version>.zip` at <https://plugins.jetbrains.com/plugin/add>. Category **UI → Themes**, license MIT. The plugin enters moderation; tokens work even before approval.
+3. <https://plugins.jetbrains.com/author/me/tokens> → **Generate Token** → name `gradle-publish-makinda-themes` → permanent → copy once.
 
-### Test the Package Locally
+### First-time marketplace submissions (Tier 2)
 
-Before publishing, test the packaged extension:
+Submit each PR once. After it merges, future versions are picked up automatically by tagging a new GitHub release on the standalone repo.
 
-```bash
-# Install the .vsix file
-code --install-extension makinda-themes-1.0.2.vsix
-```
+- **Sublime:** add an entry under `Makinda` in `repository/m.json` of `sublimehq/package_control_channel`. PR template: see [#9409](https://github.com/sublimehq/package_control_channel/pull/9409).
+- **Obsidian:** append to `community-css-themes.json` of `obsidianmd/obsidian-releases`. PR template: see [#12586](https://github.com/obsidianmd/obsidian-releases/pull/12586). Repo must contain `manifest.json`, `theme.css`, and `screenshot.png` at root, with a tag matching the manifest version (no `v` prefix).
+- **Zed:** add as a git submodule in `extensions/<id>/` plus an entry in `extensions.toml` of `zed-industries/extensions`. Sign the [Zed CLA](https://zed.dev/cla) before opening the PR. PR template: see [#5924](https://github.com/zed-industries/extensions/pull/5924). Use a verified email on your GitHub account when committing — the CLA bot rejects unrecognized identities.
 
-Then restart VS Code and activate the theme to verify everything works.
+### Tier-3 first-time submissions (manual, when ready)
 
-## Publishing to Marketplace
+These are out of scope for the automated runbook below. Each is a manual web flow:
 
-### Option 1: Publish Directly
+- **BetterDiscord** — upload `ports/discord/Makinda Light.theme.css` and `Makinda Dark.theme.css` at <https://betterdiscord.app/developers>.
+- **Visual Studio (full)** — upload at <https://marketplace.visualstudio.com/manage/publishers/makindajack>. Note: full VS doesn't natively consume VS Code-style themes; ship `ports/visual-studio/*.vssettings` as a downloadable asset.
+- **Eclipse Marketplace** — listing form at <https://marketplace.eclipse.org/user/login>.
+- **Nova Extensions** — `cd ports/nova/Makinda.novaextension && nova extension publish` (requires Nova app + Panic ID).
 
-```bash
-# Login to vsce (you'll need your PAT)
-vsce login makindajack
+---
 
-# Publish the extension
-vsce publish
-```
+## Per-release workflow
 
-### Option 2: Publish with Version Bump
+Run from the repo root unless noted. Replace `1.0.3` with the new version everywhere.
 
-```bash
-# Publish with automatic version bump
-vsce publish minor  # Bumps 1.0.0 → 1.1.0
-vsce publish patch  # Bumps 1.0.0 → 1.0.1
-vsce publish major  # Bumps 1.0.0 → 2.0.0
+### 1. Decide the version
 
-# Or specify exact version
-vsce publish 1.0.0
-```
+Use [Semantic Versioning](https://semver.org):
+- **Patch** (`1.0.x`) — palette tweaks, contrast fixes, doc/screenshot updates.
+- **Minor** (`1.x.0`) — new IDE port, new semantic-token coverage, new editor features.
+- **Major** (`x.0.0`) — breaking palette changes (anyone with their own overrides will see different colors).
 
-### Option 3: Upload Manually
+### 2. Bump versions in lockstep
 
-1. Run `vsce package` to create the `.vsix` file
-2. Go to [Marketplace Publisher Portal](https://marketplace.visualstudio.com/manage)
-3. Click on your extension
-4. Click **Update** and upload the `.vsix` file
-
-## Publishing to Open VSX
-
-[Open VSX](https://open-vsx.org) is the open marketplace consumed by VSCodium, Cursor, Windsurf, Gitpod, and most VS Code forks. We mirror the same `.vsix` there.
-
-### 1. Install ovsx
+Three places must agree:
 
 ```bash
-npm install -g ovsx
+# Edit by hand or with sed:
+NEW=1.0.3
+
+# 1. VS Code extension
+sed -i '' "s/\"version\": \"[0-9.]*\"/\"version\": \"$NEW\"/" package.json
+
+# 2. JetBrains plugin
+sed -i '' "s/version = \"[0-9.]*\"/version = \"$NEW\"/" ports/jetbrains/build.gradle.kts
+
+# 3. Obsidian theme
+sed -i '' "s/\"version\": \"[0-9.]*\"/\"version\": \"$NEW\"/" ports/obsidian/manifest.json
+
+# Sublime + Zed standalone repos: edited inside their own repos in step 7.
 ```
 
-### 2. Create a publisher namespace + token
+### 3. Update CHANGELOG.md
 
-1. Sign in to <https://open-vsx.org> with the GitHub account that owns the project.
-2. Open the user menu → **Settings** → **Namespaces** and claim `makindajack` (must match the `publisher` field in `package.json`).
-3. Generate an access token under **Settings** → **Access Tokens** and copy it once.
+Add a new section at the top under `## [Unreleased]` (or directly as `## [1.0.3] - YYYY-MM-DD`). Follow [Keep a Changelog](https://keepachangelog.com): group by `Added` / `Changed` / `Fixed` / `Removed` / `Documentation`.
 
-### 3. Publish
+### 4. Build everything
 
 ```bash
-# One-time login (token is read from $OVSX_PAT or stdin)
-export OVSX_PAT=<your-token>
-
-# Publish the .vsix that vsce already produced
-ovsx publish makinda-themes-1.0.2.vsix
+npm run build         # regenerates every editor port from source/
+npm run check         # validate + WCAG contrast audit (must pass)
+npm run screenshots   # only if the palette or themes changed
 ```
 
-Or in one shot:
+### 5. Package distributables
 
 ```bash
-ovsx publish -p $OVSX_PAT
+npx --yes @vscode/vsce package
+# → makinda-themes-<version>.vsix
+
+cd ports/jetbrains && ./gradlew --no-daemon buildPlugin && cd -
+# → ports/jetbrains/build/distributions/makinda-themes-<version>.zip
 ```
 
-After it succeeds, verify the listing at <https://open-vsx.org/extension/makindajack/makinda-themes>.
+### 6. Commit, tag, push, GitHub release
 
-> Tip: keep the VS Code Marketplace and Open VSX versions in lockstep — publish to both right after `vsce publish`.
+```bash
+git add -A
+git commit -m "Release $NEW: <one-line summary>"
+git tag v$NEW
+git push origin master
+git push origin v$NEW
 
-## Post-Publishing Checklist
+gh release create v$NEW \
+  makinda-themes-$NEW.vsix \
+  ports/jetbrains/build/distributions/makinda-themes-$NEW.zip \
+  --title "v$NEW" \
+  --notes-file <(awk "/^## \[$NEW\]/,/^## \[/{if(/^## \[/ && !/$NEW/) exit; print}" CHANGELOG.md)
+```
 
-- [ ] Verify the extension appears on the [Marketplace](https://marketplace.visualstudio.com/items?itemName=makindajack.makinda-themes)
-- [ ] Check that the README renders correctly
-- [ ] Verify the icon and gallery banner display properly
-- [ ] Test installation from the marketplace
-- [ ] Create a GitHub release with the `.vsix` file
-- [ ] Update the CHANGELOG.md for the next version cycle
+### 7. Push to the standalone marketplace repos
 
-## Updating the Extension
+These mirror specific files from `ports/<editor>/` into single-purpose repos that the marketplaces consume.
 
-1. Make your changes to the theme
-2. Update version in `package.json`
-3. Update `CHANGELOG.md`
-4. Run `vsce publish`
+```bash
+NEW=1.0.3
+ROOT=$(pwd)
+WORK=/tmp/makinda-publish
+mkdir -p $WORK && cd $WORK
+
+# --- Sublime ---
+git clone git@github.com:makindajack/makinda-sublime.git
+cd makinda-sublime
+rm -f *.sublime-color-scheme messages.json package.json README.md
+rm -rf messages
+cp -r $ROOT/ports/sublime/. .
+sed -i '' "s/\"version\": \"[0-9.]*\"/\"version\": \"$NEW\"/" package.json
+git add -A
+git commit -m "Release $NEW"
+git tag v$NEW
+git push origin main
+git push origin v$NEW
+cd ..
+
+# --- Obsidian ---
+git clone git@github.com:makindajack/makinda-obsidian.git
+cd makinda-obsidian
+cp $ROOT/ports/obsidian/manifest.json $ROOT/ports/obsidian/theme.css .
+# Refresh screenshot if themes changed:
+cp $ROOT/images/dark-markdown.png screenshot.png
+git add -A
+git commit -m "Release $NEW"
+git tag $NEW          # ⚠️ Obsidian forbids the 'v' prefix
+git push origin main
+git push origin $NEW
+gh release create $NEW manifest.json theme.css \
+  --repo makindajack/makinda-obsidian \
+  --title "$NEW" \
+  --notes "Release $NEW"
+cd ..
+
+# --- Zed ---
+git clone git@github.com:makindajack/makinda-zed.git
+cd makinda-zed
+rm -rf themes README.md extension.toml
+cp -r $ROOT/ports/zed/. .
+sed -i '' "s/version = \"[0-9.]*\"/version = \"$NEW\"/" extension.toml
+git add -A
+git commit -m "Release $NEW"
+git tag v$NEW
+git push origin main
+git push origin v$NEW
+cd ..
+```
+
+### 8. Publish to Tier 1 marketplaces
+
+Tokens are read from env vars — never hardcode them, never commit them.
+
+```bash
+export VSCE_PAT=...
+export OVSX_PAT=...
+export JETBRAINS_PUBLISH_TOKEN=...
+
+# VS Code Marketplace
+npx --yes @vscode/vsce publish --pat "$VSCE_PAT"
+
+# Open VSX
+npx --yes ovsx publish makinda-themes-$NEW.vsix -p "$OVSX_PAT"
+
+# JetBrains Marketplace
+( cd ports/jetbrains && ./gradlew --no-daemon publishPlugin )
+```
+
+### 9. Bump the marketplace registry PRs (Tier 2)
+
+Tier 2 marketplaces auto-pick-up new tags from the standalone repos **after** the initial PR has merged. Sequence per marketplace:
+
+- **Sublime Package Control** — nothing to do; Package Control polls tags on the registered repo. Users get `$NEW` next refresh cycle.
+- **Obsidian** — nothing to do; Obsidian polls the GitHub releases of the registered repo. Users see `$NEW` after the next index rebuild (~hours).
+- **Zed** — open a follow-up PR to `zed-industries/extensions` that bumps the submodule pointer and the `version` field in `extensions.toml`:
+
+  ```bash
+  cd /tmp/makinda-publish
+  rm -rf zed-extensions
+  git clone --depth 1 git@github.com:makindajack/extensions.git zed-extensions
+  cd zed-extensions
+  git remote add upstream https://github.com/zed-industries/extensions.git
+  git fetch upstream main --depth 1
+  git checkout -B bump-makinda-$NEW upstream/main
+  cd extensions/makinda-themes
+  git fetch && git checkout v$NEW
+  cd ../..
+  sed -i '' "/^\[makinda-themes\]/,/^$/ s/version = \"[0-9.]*\"/version = \"$NEW\"/" extensions.toml
+  git -c user.email=22730819+makindajack@users.noreply.github.com \
+      -c user.name=makindajack \
+      commit -am "Bump makinda-themes to $NEW"
+  git push -u origin bump-makinda-$NEW
+  gh pr create --repo zed-industries/extensions \
+    --base main --head makindajack:bump-makinda-$NEW \
+    --title "Bump makinda-themes to $NEW" \
+    --body "Bumps the submodule pointer and \`version\` in \`extensions.toml\`."
+  ```
+
+### 10. Tier 3 (manual)
+
+Reupload the relevant artifacts to the web portals listed in [§ One-time setup → Tier-3 first-time submissions](#tier-3-first-time-submissions-manual-when-ready). Do these last; they're rarely time-critical.
+
+### 11. Post-release verification
+
+- [ ] <https://marketplace.visualstudio.com/items?itemName=makindajack.makinda-themes> shows `$NEW` (cache can take ~5 min)
+- [ ] <https://open-vsx.org/extension/makindajack/makinda-themes> shows `$NEW`
+- [ ] <https://plugins.jetbrains.com/plugin/me> JetBrains listing shows `$NEW` (after moderation)
+- [ ] [GitHub release](https://github.com/makindajack/makinda-themes/releases) page shows `$NEW` with both artifacts attached
+- [ ] Both standalone repos show `$NEW` tags
+- [ ] Tier-2 PRs merged or pending
+
+---
+
+## Token rotation
+
+Rotate any token that's ever been:
+- pasted into a chat or screen recording,
+- committed to a repo (even briefly — assume Git history is forever),
+- copied to a machine you no longer control.
+
+Quickest way to rotate:
+- **VSCE_PAT** — <https://dev.azure.com> → avatar → Personal access tokens → revoke + new.
+- **OVSX_PAT** — <https://open-vsx.org> → Settings → Access Tokens → delete + generate.
+- **JETBRAINS_PUBLISH_TOKEN** — <https://plugins.jetbrains.com/author/me/tokens> → revoke + generate.
+
+---
 
 ## Troubleshooting
 
-### "Missing publisher name"
+### `vsce publish` returns `401 Unauthorized`
 
-Ensure `package.json` has the correct publisher:
+Your PAT's organization scope is wrong. Re-create at <https://dev.azure.com> with **Organization: All accessible organizations**, not a single one.
 
-```json
-"publisher": "makindajack"
-```
+### `ovsx publish` says "namespace not owned"
 
-### "Invalid token"
+You haven't claimed the `makindajack` namespace at <https://open-vsx.org/user-settings/namespaces>.
 
-- Make sure you're using a PAT, not a password
-- Verify the token has **Marketplace > Manage** permissions
-- Check the token hasn't expired
+### `gradle publishPlugin` says `404 Not Found`
 
-### "Extension validation failed"
+The plugin listing doesn't exist yet on JetBrains Marketplace. Do the one-time manual upload at <https://plugins.jetbrains.com/plugin/add> first.
 
-Run `vsce ls` to see which files will be included, and check for:
+### CLA bot rejects "unparseable identity"
 
-- Missing required fields in `package.json`
-- Invalid JSON in theme files
-- Missing icon file
-
-## Useful Commands
+Your commit's `git config user.email` isn't on file at <https://github.com/settings/emails>. Re-author with your GitHub noreply email:
 
 ```bash
-# Show extension info
-vsce show makindajack.makinda-themes
-
-# List files that will be packaged
-vsce ls
-
-# Show package contents
-vsce ls-publishers
+git -c user.email=22730819+makindajack@users.noreply.github.com \
+    -c user.name=makindajack \
+    commit --amend --reset-author --no-edit
+git push -f
 ```
+
+Then comment `@cla-bot check` on the PR.
+
+### Obsidian PR rejected for "missing screenshot"
+
+Their validator requires `screenshot.png` at the **root** of `makindajack/makinda-obsidian`, and the manifest version (no `v` prefix) must be the latest GitHub release tag with `manifest.json` and `theme.css` attached as assets.
+
+### Package Control still shows the old version
+
+Package Control polls tags every few hours. Confirm your new tag exists at <https://github.com/makindajack/makinda-sublime/tags> and wait. There's no faster path.
+
+---
+
+## Useful commands
+
+```bash
+# What will be packaged into the .vsix?
+npx --yes @vscode/vsce ls
+
+# Show extension info on the Marketplace
+npx --yes @vscode/vsce show makindajack.makinda-themes
+
+# Open every marketplace listing in a browser
+open https://marketplace.visualstudio.com/items?itemName=makindajack.makinda-themes
+open https://open-vsx.org/extension/makindajack/makinda-themes
+open https://plugins.jetbrains.com/plugin/me
+open https://packagecontrol.io/packages/Makinda%20Themes
+open https://github.com/makindajack/makinda-themes/releases
+```
+
+---
 
 ## Resources
 
-- [Publishing Extensions](https://code.visualstudio.com/api/working-with-extensions/publishing-extension)
-- [Extension Manifest Reference](https://code.visualstudio.com/api/references/extension-manifest)
-- [Marketplace Presentation Tips](https://code.visualstudio.com/api/references/extension-manifest#marketplace-presentation-tips)
+- [VS Code — Publishing Extensions](https://code.visualstudio.com/api/working-with-extensions/publishing-extension)
+- [Open VSX — Publishing](https://github.com/EclipseFdn/open-vsx.org/wiki/Publishing-Extensions)
+- [JetBrains — Publishing Plugins](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html)
+- [Package Control — Submitting a Package](https://packagecontrol.io/docs/submitting_a_package)
+- [Obsidian — Submit a theme](https://docs.obsidian.md/Themes/App+themes/Submit+your+theme)
+- [Zed — Developing Extensions](https://zed.dev/docs/extensions/developing-extensions)
