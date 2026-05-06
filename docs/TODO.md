@@ -14,7 +14,7 @@ Status legend: `[ ]` not started · `[~]` in progress · `[x]` done
 - [x] Define semantic token map in `source/tokens.json` (mirrors [THEMES.md](THEMES.md))
 - [x] Add a Node validator (`build/validate.mjs`) that flags theme colors not in the palette
 - [x] Wire `npm run validate` / `npm run validate:strict` into `package.json`
-- [ ] Resolve current stragglers (run `npm run validate` — 17 in Light, 7 in Dark as of 2026-05-06). Either add to palette or replace in theme JSONs.
+- [x] Resolve all stragglers — `npm run validate:strict` is green for both variants
 - [ ] Add a Node build script (`build/vscode.mjs`) that regenerates the VS Code themes from source
 - [ ] Verify generated VS Code JSON is byte-identical to the hand-tuned files (or capture the diff intentionally)
 - [ ] Add `npm run build` and `npm run check` (lint + contrast audit)
@@ -28,6 +28,16 @@ Status legend: `[ ]` not started · `[~]` in progress · `[x]` done
 - [ ] Add semantic token coverage for: TypeScript decorators, Rust lifetimes, Python `self`, Go receiver types
 - [ ] Add screenshots to `images/` for: TS, Python, Rust, Go, Markdown, JSON, HTML/JSX
 - [ ] Publish to **Open VSX** (mirror of VS Code Marketplace) so VSCodium / Cursor / Windsurf users get auto-updates
+
+### Marketplace migration (`makinda-dark` → `makinda-themes`)
+
+The Dark variant used to ship as the standalone extension `makindajack.makinda-dark`. Now that both variants live together in `makindajack.makinda-themes`, the old listing has to be retired. See [PUBLISHING.md → Migrating from `makinda-dark`](PUBLISHING.md#migrating-from-makinda-dark-one-time) for steps.
+
+- [ ] Push a final `makinda-dark` patch release whose README points users to `makinda-themes` (optional but friendly)
+- [ ] **Unpublish `makindajack.makinda-dark`** from the VS Code Marketplace (publisher portal)
+- [ ] Confirm only `makinda-themes` is listed at <https://marketplace.visualstudio.com/publishers/makindajack>
+- [ ] Publish the latest `makinda-themes` (after build script lands) to VS Code Marketplace and Open VSX
+- [ ] Update marketplace README screenshots to show both Light and Dark
 
 ## Phase 2 — Adjacent VS Code ecosystem
 

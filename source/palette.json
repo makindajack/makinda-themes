@@ -38,6 +38,13 @@
                 "strong": "#36393f",
                 "focus": "#ff6b0d"
             },
+            "overlay": {
+                "scrollbarSlider": "#47485450"
+            },
+            "shadow": {
+                "widget": "#0000004d",
+                "scrollbar": "#000000a0"
+            },
             "syntax": {
                 "keyword": "#ff6b0d",
                 "function": "#ff8d37",
@@ -90,11 +97,11 @@
                 "white": "#e6e6e8",
                 "brightBlack": "#6b7280",
                 "brightRed": "#fca5a5",
-                "brightGreen": "#6ee7b7",
-                "brightYellow": "#fcd34d",
+                "brightGreen": "#86efac",
+                "brightYellow": "#fde68a",
                 "brightBlue": "#93c5fd",
                 "brightMagenta": "#c4b5fd",
-                "brightCyan": "#5eead4",
+                "brightCyan": "#67e8f9",
                 "brightWhite": "#ffffff"
             }
         },
@@ -129,13 +136,26 @@
                 "subtle": "#6b7280",
                 "disabled": "#969ba6",
                 "placeholder": "#9ca3af",
+                "faint": "#cfd2d6",
                 "inverse": "#ffffff"
             },
             "border": {
                 "default": "#e7e8ea",
                 "subtle": "#e5e7eb",
                 "strong": "#d1d5db",
+                "input": "#cfd2d6",
                 "focus": "#f05106"
+            },
+            "overlay": {
+                "selectionFaint": "#cfd2d650",
+                "findMatchTransparent": "#ffd5a800",
+                "findMatchSoft": "#ffd5a840",
+                "findMatch": "#ffd5a880",
+                "findMatchStrong": "#ffd5a890"
+            },
+            "shadow": {
+                "scrollbar": "#0000000d",
+                "widget": "#0000001a"
             },
             "syntax": {
                 "keyword": "#c73b07",
@@ -179,21 +199,21 @@
                 "changedFg": "#ff8d37"
             },
             "ansi": {
-                "black": "#1e2022",
+                "black": "#36393f",
                 "red": "#dc2626",
-                "green": "#059669",
+                "green": "#16a34a",
                 "yellow": "#d97706",
                 "blue": "#2563eb",
                 "magenta": "#7c3aed",
-                "cyan": "#0d7377",
+                "cyan": "#06b6d4",
                 "white": "#e5e7eb",
                 "brightBlack": "#6b7280",
-                "brightRed": "#ef4444",
-                "brightGreen": "#10b981",
-                "brightYellow": "#f59e0b",
-                "brightBlue": "#3b82f6",
-                "brightMagenta": "#8b5cf6",
-                "brightCyan": "#14b8a6",
+                "brightRed": "#f87171",
+                "brightGreen": "#22c55e",
+                "brightYellow": "#fbbf24",
+                "brightBlue": "#60a5fa",
+                "brightMagenta": "#a855f7",
+                "brightCyan": "#22d3ee",
                 "brightWhite": "#ffffff"
             }
         }

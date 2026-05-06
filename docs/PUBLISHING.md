@@ -2,6 +2,23 @@
 
 This guide explains how to build and publish the Makinda Themes extension to the VS Code Marketplace.
 
+## Migrating from `makinda-dark` (one-time)
+
+The standalone `makindajack.makinda-dark` extension is **deprecated** — Dark now ships inside `makindajack.makinda-themes` together with Light.
+
+To complete the migration on the Marketplace:
+
+1. **Sign in** to <https://marketplace.visualstudio.com/manage/publishers/makindajack> with the publisher account.
+2. Open the **`makinda-dark`** extension row.
+3. Click the **`…`** menu → **Unpublish** (or **Remove**) the extension. Unpublishing hides it from search and prevents new installs; existing installs are not auto-removed.
+4. Optionally, before unpublishing, push a final patch release of `makinda-dark` whose README points users to `makinda-themes`. Skip this if you've already done it.
+5. Verify `makindajack.makinda-themes` is the only listing under your publisher: <https://marketplace.visualstudio.com/publishers/makindajack>.
+6. Do the same on **Open VSX** if/when published there.
+
+> Note: Marketplace also exposes a "Deprecate" flag (`extensionPack`/`obsolete` field). For our case `Unpublish` is the cleanest action since the Dark theme has been folded into another extension.
+
+After this is done, tick the corresponding item in [TODO.md](TODO.md).
+
 ## Prerequisites
 
 ### 1. Install vsce (Visual Studio Code Extension Manager)

@@ -4,7 +4,7 @@
   "semanticHighlighting": true,
   "semanticTokenColors": {
     "enumMember": {
-      "foreground": "#7231bf"
+      "foreground": "#8947db"
     },
     "variable.constant": {
       "foreground": "#9e2f0e"
@@ -1957,7 +1957,7 @@
     "notificationCenterHeader.background": "#f9f9fa",
     "notifications.border": "#e7e8ea",
     "gitDecoration.addedResourceForeground": "#22c55e",
-    "gitDecoration.conflictingResourceForeground": "#8b5cf6",
+    "gitDecoration.conflictingResourceForeground": "#8947db",
     "gitDecoration.deletedResourceForeground": "#ef4444",
     "gitDecoration.ignoredResourceForeground": "#969ba6",
     "gitDecoration.modifiedResourceForeground": "#f59e0b",
