@@ -2,15 +2,20 @@
 
 Tracking the expansion of Makinda Themes from VS Code-only to a cross-editor theme suite. See [SCOPE.md](SCOPE.md), [IDES.md](IDES.md), and [THEMES.md](THEMES.md) for context.
 
+> **Companion repo:** icon design lives in `~/Downloads/01.GitHub/makinda-icons` (`makinda-icons`). Out of scope for this checklist; tracked separately.
+
 Status legend: `[ ]` not started · `[~]` in progress · `[x]` done
 
 ---
 
 ## Phase 0 — Foundation
 
-- [ ] Extract palette from current VS Code JSONs into `source/palette.json`
-- [ ] Define semantic token map in `source/tokens.json` (mirrors [THEMES.md](THEMES.md))
-- [ ] Add a Node build script (`build/index.mjs`) that regenerates the VS Code themes from the source
+- [x] Extract palette from current VS Code JSONs into `source/palette.json`
+- [x] Define semantic token map in `source/tokens.json` (mirrors [THEMES.md](THEMES.md))
+- [x] Add a Node validator (`build/validate.mjs`) that flags theme colors not in the palette
+- [x] Wire `npm run validate` / `npm run validate:strict` into `package.json`
+- [ ] Resolve current stragglers (run `npm run validate` — 17 in Light, 7 in Dark as of 2026-05-06). Either add to palette or replace in theme JSONs.
+- [ ] Add a Node build script (`build/vscode.mjs`) that regenerates the VS Code themes from source
 - [ ] Verify generated VS Code JSON is byte-identical to the hand-tuned files (or capture the diff intentionally)
 - [ ] Add `npm run build` and `npm run check` (lint + contrast audit)
 - [ ] Restructure repo into `ports/vscode/` (keep current marketplace package working — bump path in `package.json` once moved)

@@ -63,6 +63,9 @@
   "scripts": {
     "vscode:prepublish": "echo 'Ready for publishing'",
     "package": "vsce package",
-    "publish": "vsce publish"
+    "publish": "vsce publish",
+    "validate": "node build/validate.mjs",
+    "validate:strict": "node build/validate.mjs --strict",
+    "validate:json": "node build/validate.mjs --json"
   }
 }

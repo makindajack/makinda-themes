@@ -6,6 +6,10 @@
 
 The project started as a VS Code extension. It is being expanded into a multi-target theme suite, all generated from a single source of truth so colors stay in sync across every port.
 
+## Companion projects
+
+- **`makinda-icons`** — sibling repo at `~/Downloads/01.GitHub/makinda-icons` housing the icon design (file/folder icons + extension/app icons). Shares the Makinda brand palette but ships independently. Themes and icons are separate extensions/packages so users can mix and match.
+
 ## Goals
 
 1. **One brand, every editor.** Identical palette and feel across VS Code, JetBrains, Vim, Sublime, Zed, Xcode, terminals, etc.
@@ -17,7 +21,7 @@ The project started as a VS Code extension. It is being expanded into a multi-ta
 ## Non-goals
 
 - Custom fonts (recommendations only — themes don't ship fonts).
-- Icon themes (separate project, possibly future).
+- Icon themes (lives in the companion `makinda-icons` repo, not here).
 - Per-language micro-tuning beyond what each editor's grammar offers.
 - Editors with no theming API (e.g., plain Notepad).
 
