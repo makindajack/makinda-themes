@@ -16,6 +16,7 @@ const ports = [
     "sublime.mjs",
     "zed.mjs",
     "neovim.mjs",
+    "xcode.mjs",
     "alacritty.mjs",
     "kitty.mjs",
     "warp.mjs",

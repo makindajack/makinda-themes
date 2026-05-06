@@ -99,11 +99,11 @@ The Dark variant used to ship as the standalone extension `makindajack.makinda-d
 
 ## Phase 7 — Xcode
 
-- [ ] Scaffold `ports/xcode/`
-- [ ] Generate `Makinda Light.xccolortheme` (plist) from source
-- [ ] Generate Dark variant
-- [ ] Manual install script `install.sh`
-- [ ] README with screenshots in Xcode
+- [x] Scaffold `ports/xcode/`
+- [x] Generate `Makinda Light.xccolortheme` (plist) from source
+- [x] Generate Dark variant
+- [x] Manual install script `install.sh`
+- [x] README with screenshots in Xcode
 
 ## Phase 8 — Helix
 
