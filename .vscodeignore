@@ -4,6 +4,9 @@
 .github/**
 docs/**
 node_modules/**
+build/**
+ports/**
+source/**
 *.vsix
 .gitignore
 .gitattributes

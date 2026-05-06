@@ -1,0 +1,23 @@
+{
+  "name": "Makinda Dark",
+  "background": "#0e0e0f",
+  "foreground": "#e7e8ea",
+  "cursorColor": "#ff6b0d",
+  "selectionBackground": "#1e2022",
+  "black": "#0e0e0f",
+  "red": "#f87171",
+  "green": "#34d399",
+  "yellow": "#fbbf24",
+  "blue": "#60a5fa",
+  "purple": "#a78bfa",
+  "cyan": "#2dd4bf",
+  "white": "#e6e6e8",
+  "brightBlack": "#6b7280",
+  "brightRed": "#fca5a5",
+  "brightGreen": "#86efac",
+  "brightYellow": "#fde68a",
+  "brightBlue": "#93c5fd",
+  "brightPurple": "#c4b5fd",
+  "brightCyan": "#67e8f9",
+  "brightWhite": "#ffffff"
+}

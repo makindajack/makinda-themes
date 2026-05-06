@@ -1,0 +1,23 @@
+{
+  "name": "Makinda Light",
+  "background": "#ffffff",
+  "foreground": "#1e2022",
+  "cursorColor": "#f05106",
+  "selectionBackground": "#f3f3f5",
+  "black": "#36393f",
+  "red": "#dc2626",
+  "green": "#16a34a",
+  "yellow": "#d97706",
+  "blue": "#2563eb",
+  "purple": "#7c3aed",
+  "cyan": "#06b6d4",
+  "white": "#e5e7eb",
+  "brightBlack": "#6b7280",
+  "brightRed": "#f87171",
+  "brightGreen": "#22c55e",
+  "brightYellow": "#fbbf24",
+  "brightBlue": "#60a5fa",
+  "brightPurple": "#a855f7",
+  "brightCyan": "#22d3ee",
+  "brightWhite": "#ffffff"
+}

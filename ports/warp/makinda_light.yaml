@@ -1,0 +1,26 @@
+# Makinda Light — Warp theme
+# Generated from source/palette.json. Do not edit by hand.
+name: "Makinda Light"
+accent: "#f05106"
+background: "#ffffff"
+foreground: "#1e2022"
+details: "light"
+terminal_colors:
+  normal:
+    black:   "#36393f"
+    red:     "#dc2626"
+    green:   "#16a34a"
+    yellow:  "#d97706"
+    blue:    "#2563eb"
+    magenta: "#7c3aed"
+    cyan:    "#06b6d4"
+    white:   "#e5e7eb"
+  bright:
+    black:   "#6b7280"
+    red:     "#f87171"
+    green:   "#22c55e"
+    yellow:  "#fbbf24"
+    blue:    "#60a5fa"
+    magenta: "#a855f7"
+    cyan:    "#22d3ee"
+    white:   "#ffffff"

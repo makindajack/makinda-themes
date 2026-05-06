@@ -1,0 +1,34 @@
+# Makinda Dark — Alacritty theme
+# Generated from source/palette.json. Do not edit by hand.
+
+[colors.primary]
+background = "#0e0e0f"
+foreground = "#e7e8ea"
+
+[colors.cursor]
+text   = "#0e0e0f"
+cursor = "#ff6b0d"
+
+[colors.selection]
+text       = "#e7e8ea"
+background = "#1e2022"
+
+[colors.normal]
+black   = "#0e0e0f"
+red     = "#f87171"
+green   = "#34d399"
+yellow  = "#fbbf24"
+blue    = "#60a5fa"
+magenta = "#a78bfa"
+cyan    = "#2dd4bf"
+white   = "#e6e6e8"
+
+[colors.bright]
+black   = "#6b7280"
+red     = "#fca5a5"
+green   = "#86efac"
+yellow  = "#fde68a"
+blue    = "#93c5fd"
+magenta = "#c4b5fd"
+cyan    = "#67e8f9"
+white   = "#ffffff"

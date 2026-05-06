@@ -99,12 +99,12 @@ The Dark variant used to ship as the standalone extension `makindajack.makinda-d
 
 ## Phase 9 — Terminals
 
-- [ ] iTerm2 — `ports/iterm2/Makinda Light.itermcolors`, `…Dark.itermcolors`
-- [ ] Warp — `ports/warp/makinda_light.yaml`, `…dark.yaml`
-- [ ] Alacritty — `ports/alacritty/makinda_light.toml`, `…dark.toml`
-- [ ] Kitty — `ports/kitty/makinda_light.conf`, `…dark.conf`
+- [x] iTerm2 — `ports/iterm2/Makinda Light.itermcolors`, `…Dark.itermcolors`
+- [x] Warp — `ports/warp/makinda_light.yaml`, `…dark.yaml`
+- [x] Alacritty — `ports/alacritty/makinda_light.toml`, `…dark.toml`
+- [x] Kitty — `ports/kitty/makinda_light.conf`, `…dark.conf`
 - [ ] WezTerm — `ports/wezterm/makinda.lua`
-- [ ] Windows Terminal — JSON snippet in `ports/windows-terminal/`
+- [x] Windows Terminal — JSON snippet in `ports/windows-terminal/`
 - [ ] Ghostty — theme file in `ports/ghostty/`
 
 ## Phase 10 — Backlog (Tier 3)

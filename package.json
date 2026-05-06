@@ -66,6 +66,12 @@
     "publish": "vsce publish",
     "validate": "node build/validate.mjs",
     "validate:strict": "node build/validate.mjs --strict",
-    "validate:json": "node build/validate.mjs --json"
+    "validate:json": "node build/validate.mjs --json",
+    "build": "node build/index.mjs",
+    "build:alacritty": "node build/alacritty.mjs",
+    "build:kitty": "node build/kitty.mjs",
+    "build:warp": "node build/warp.mjs",
+    "build:windows-terminal": "node build/windows-terminal.mjs",
+    "build:iterm2": "node build/iterm2.mjs"
   }
 }
