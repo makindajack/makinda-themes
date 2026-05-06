@@ -1,0 +1,19 @@
+{
+  "identifier": "com.makindajack.makinda",
+  "name": "Makinda Themes",
+  "organization": "Jackson Makinda",
+  "description": "Premium Light + Dark themes with warm orange accents.",
+  "version": "1.0.1",
+  "categories": [
+    "themes"
+  ],
+  "main": null,
+  "themes": [
+    {
+      "path": "Themes/Makinda Light.json"
+    },
+    {
+      "path": "Themes/Makinda Dark.json"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# Makinda Themes — Slack sidebar themes
+# Paste one of these into Slack → Preferences → Themes → Customize → Colors.
+
+## Makinda Light
+#F9F9FA,#F3F3F5,#F05106,#FFFFFF,#F9F9FA,#1E2022,#22C55E,#EF4444
+
+## Makinda Dark
+#0E0E0F,#1E2022,#FF6B0D,#FFFFFF,#161618,#E7E8EA,#22C55E,#EF4444

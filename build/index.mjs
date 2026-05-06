@@ -21,6 +21,11 @@ const ports = [
     "textmate.mjs",
     "emacs.mjs",
     "notepad-plus-plus.mjs",
+    "visual-studio.mjs",
+    "eclipse.mjs",
+    "bbedit.mjs",
+    "nova.mjs",
+    "lapce.mjs",
     "alacritty.mjs",
     "kitty.mjs",
     "warp.mjs",
@@ -28,6 +33,9 @@ const ports = [
     "ghostty.mjs",
     "windows-terminal.mjs",
     "iterm2.mjs",
+    "slack.mjs",
+    "discord.mjs",
+    "obsidian.mjs",
 ];
 
 function run(file) {

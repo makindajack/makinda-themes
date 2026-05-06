@@ -1,0 +1,71 @@
+<UserSettings>
+    <ApplicationIdentity version="17.0"/>
+    <ToolsOptions>
+        <ToolsOptionsCategory name="Environment" RegisteredName="Environment">
+            <ToolsOptionsSubCategory name="FontsAndColors" RegisteredName="FontsAndColors" PackageName="Visual Studio Environment Package">
+                <PropertyValue name="Version">2</PropertyValue>
+                <FontsAndColors Version="2.0">
+                    <Categories>
+                        <Category GUID="{A27B4E24-A735-4D1D-B8E7-9716E1E3D8E0}" FontIsDefault="No" FontName="Consolas" FontSize="11" CharSet="1" FontIsBold="No">
+                            <Items>
+                            <Item Name="Plain Text" Foreground="0x02EAE8E7" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="Selected Text" Foreground="0x02EAE8E7" Background="0x0222201E" BoldFont="No"/>
+                            <Item Name="Inactive Selected Text" Foreground="0x02EAE8E7" Background="0x02181616" BoldFont="No"/>
+                            <Item Name="Indicator Margin" Foreground="0x02EAE8E7" Background="0x02181616" BoldFont="No"/>
+                            <Item Name="Line Numbers" Foreground="0x02544B47" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="Visible White Space" Foreground="0x02544B47" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="Brace Matching (Rectangle)" Foreground="0x020D6BFF" Background="0x0222201E" BoldFont="No"/>
+                            <Item Name="Bookmark" Foreground="0x020D6BFF" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="Comment" Foreground="0x0293857D" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="Identifier" Foreground="0x02EAE8E7" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="Keyword" Foreground="0x020D6BFF" Background="0x020F0E0E" BoldFont="Yes"/>
+                            <Item Name="Number" Foreground="0x020D6BFF" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="Operator" Foreground="0x02A69B96" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="Punctuation" Foreground="0x02A69B96" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="String" Foreground="0x02BFD42D" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="String(C# @ Verbatim)" Foreground="0x02BFD42D" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="XML Doc Comment" Foreground="0x0293857D" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="XML Doc Tag" Foreground="0x02378DFF" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="XML Attribute" Foreground="0x0270B7FF" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="XML Attribute Value" Foreground="0x02BFD42D" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="XML Name" Foreground="0x02378DFF" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="HTML Element Name" Foreground="0x02378DFF" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="HTML Attribute Name" Foreground="0x0270B7FF" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="HTML Attribute Value" Foreground="0x02BFD42D" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="HTML Comment" Foreground="0x0293857D" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="CSS Property Name" Foreground="0x0270B7FF" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="CSS Property Value" Foreground="0x02F28EB8" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="CSS Selector" Foreground="0x02378DFF" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="JSON - Property" Foreground="0x02EAE8E7" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="JSON - String value" Foreground="0x02BFD42D" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="JSON - Number value" Foreground="0x020D6BFF" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="JSON - Keyword" Foreground="0x02F28EB8" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="Preprocessor Keyword" Foreground="0x0270B7FF" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="User Types" Foreground="0x02FA8BA7" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="User Types (Classes)" Foreground="0x02FA8BA7" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="User Types (Delegates)" Foreground="0x02FA8BA7" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="User Types (Enums)" Foreground="0x02FA8BA7" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="User Types (Interfaces)" Foreground="0x02FA8BA7" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="User Types (Type parameters)" Foreground="0x02FA8BA7" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="User Types (Value types)" Foreground="0x02FA8BA7" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="User Members (Methods)" Foreground="0x02378DFF" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="User Members (Constants)" Foreground="0x02F28EB8" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="User Members (Fields)" Foreground="0x02EAE8E7" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="User Members (Properties)" Foreground="0x02EAE8E7" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="User Members (Events)" Foreground="0x02378DFF" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="User Members (Namespaces)" Foreground="0x02F28EB8" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="Compiler Error" Foreground="0x024444EF" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="Warning" Foreground="0x020B9EF5" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="Other Error" Foreground="0x024444EF" Background="0x020F0E0E" BoldFont="No"/>
+                            <Item Name="Syntax Error" Foreground="0x024444EF" Background="0x020F0E0E" BoldFont="No"/>
+                            </Items>
+                        </Category>
+                    </Categories>
+                </FontsAndColors>
+            </ToolsOptionsSubCategory>
+        </ToolsOptionsCategory>
+    </ToolsOptions>
+    <Category name="Makinda" Category="{B6E3D7E1-9D6F-4F9F-9F7B-DARK0000MAKI}" Package="" RegisteredName="Makinda Dark">
+        <PropertyValue name="DisplayName">Makinda Dark</PropertyValue>
+    </Category>
+</UserSettings>

@@ -1,0 +1,186 @@
+{
+  "name": "Makinda Dark",
+  "kind": "dark",
+  "meta": {
+    "interface-style": "dark"
+  },
+  "window": {
+    "background": "#0e0e0f",
+    "border": "#1e2022"
+  },
+  "sidebar": {
+    "background": "#0e0e0f",
+    "section-header-background": "#161618",
+    "section-header-foreground": "#969ba6",
+    "border": "#1e2022",
+    "text": "#e7e8ea",
+    "selected-text": "#e7e8ea",
+    "selected-background": "#1e2022",
+    "selected-text-inactive": "#969ba6",
+    "selected-background-inactive": "#161618"
+  },
+  "editor": {
+    "background": "#0e0e0f",
+    "border": "#1e2022",
+    "text": "#e7e8ea",
+    "invisibles": "#474b54",
+    "current-line": "#161618",
+    "cursor": "#ff6b0d",
+    "indentguide": "#27272a",
+    "indentguide-active": "#36393f",
+    "selection": "#1e2022",
+    "selection-text": "#e7e8ea",
+    "selection-inactive": "#161618",
+    "selection-text-inactive": "#e7e8ea",
+    "gutter": {
+      "background": "#0e0e0f",
+      "text": "#474b54",
+      "current-line-background": "#161618",
+      "current-line-text": "#ff6b0d"
+    }
+  },
+  "styles": {
+    "comments": {
+      "color": "#7d8593",
+      "italic": true
+    },
+    "processing": {
+      "color": "#ffb770"
+    },
+    "declaration": {
+      "color": "#ff6b0d"
+    },
+    "bracket": {
+      "color": "#969ba6"
+    },
+    "operator": {
+      "color": "#969ba6"
+    },
+    "invalid": {
+      "color": "#ef4444"
+    },
+    "link": {
+      "color": "#22d3ee",
+      "underline": true
+    },
+    "keywords": {
+      "color": "#ff6b0d",
+      "bold": true
+    },
+    "keywords-special": {
+      "color": "#ff6b0d"
+    },
+    "values": {
+      "color": "#b88ef2"
+    },
+    "values-special": {
+      "color": "#b88ef2"
+    },
+    "identifiers": {
+      "color": "#e7e8ea"
+    },
+    "identifiers-type": {
+      "color": "#a78bfa"
+    },
+    "identifiers-function": {
+      "color": "#ff8d37"
+    },
+    "identifiers-method": {
+      "color": "#ff8d37"
+    },
+    "identifiers-constant": {
+      "color": "#b88ef2"
+    },
+    "identifiers-variable": {
+      "color": "#e7e8ea"
+    },
+    "identifiers-property": {
+      "color": "#e7e8ea"
+    },
+    "identifiers-argument": {
+      "color": "#ffb770",
+      "italic": true
+    },
+    "identifiers-decorator": {
+      "color": "#ffb770"
+    },
+    "identifiers-key": {
+      "color": "#ffb770"
+    },
+    "strings": {
+      "color": "#2dd4bf"
+    },
+    "strings-special": {
+      "color": "#22d3ee"
+    },
+    "regex": {
+      "color": "#22d3ee"
+    },
+    "regex-special": {
+      "color": "#22d3ee"
+    },
+    "numbers": {
+      "color": "#ff6b0d"
+    },
+    "numbers-special": {
+      "color": "#b88ef2"
+    },
+    "tags": {
+      "color": "#ff8d37"
+    },
+    "tags-attributes": {
+      "color": "#ffb770"
+    },
+    "tags-values": {
+      "color": "#2dd4bf"
+    },
+    "markup-headings": {
+      "color": "#ff8d37",
+      "bold": true
+    },
+    "markup-bold": {
+      "color": "#ff8d37",
+      "bold": true
+    },
+    "markup-italic": {
+      "color": "#ff6b0d",
+      "italic": true
+    },
+    "markup-link": {
+      "color": "#22d3ee",
+      "underline": true
+    },
+    "markup-list": {
+      "color": "#ff8d37"
+    },
+    "markup-code": {
+      "color": "#2dd4bf"
+    },
+    "markup-quote": {
+      "color": "#7d8593",
+      "italic": true
+    }
+  },
+  "terminal": {
+    "background": "#0e0e0f",
+    "text": "#e7e8ea",
+    "cursor": "#ff6b0d",
+    "selection": "#1e2022",
+    "black": "#0e0e0f",
+    "red": "#f87171",
+    "green": "#34d399",
+    "yellow": "#fbbf24",
+    "blue": "#60a5fa",
+    "magenta": "#a78bfa",
+    "cyan": "#2dd4bf",
+    "white": "#e6e6e8",
+    "bright-black": "#6b7280",
+    "bright-red": "#fca5a5",
+    "bright-green": "#86efac",
+    "bright-yellow": "#fde68a",
+    "bright-blue": "#93c5fd",
+    "bright-magenta": "#c4b5fd",
+    "bright-cyan": "#67e8f9",
+    "bright-white": "#ffffff"
+  }
+}

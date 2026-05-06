@@ -1,0 +1,94 @@
+/**
+ * @name Makinda Dark
+ * @author Jackson Makinda
+ * @version 1.0.1
+ * @description Makinda Dark — premium dark Discord theme with warm orange accents.
+ * @source https://github.com/makindajack/makinda-themes
+ */
+
+:root {
+    /* Brand */
+    --brand-experiment: #ff6b0d;
+    --brand-experiment-100: #ff8d37;
+    --brand-experiment-160: #ff6b0d;
+    --brand-experiment-200: #ff6b0d;
+    --brand-experiment-260: #ff6b0d;
+    --brand-experiment-300: #ff6b0d;
+    --brand-experiment-360: #ff6b0d;
+    --brand-experiment-400: #ff6b0d;
+    --brand-experiment-460: #ff6b0d;
+    --brand-experiment-500: #ff6b0d;
+    --brand-experiment-560: #ff8d37;
+    --brand-experiment-600: #ff8d37;
+    --brand-experiment-660: #ff8d37;
+    --brand-experiment-700: #ff8d37;
+    --brand-experiment-760: #ff8d37;
+    --brand-experiment-800: #ff8d37;
+    --brand-experiment-860: #ff8d37;
+    --brand-experiment-900: #ff8d37;
+
+    /* Backgrounds */
+    --background-primary: #0e0e0f;
+    --background-secondary: #0e0e0f;
+    --background-secondary-alt: #161618;
+    --background-tertiary: #0e0e0f;
+    --background-accent: #ff6b0d;
+    --background-floating: #1e2022;
+    --background-mentioned: #ff6b0d22;
+    --background-mentioned-hover: #ff6b0d33;
+    --background-message-hover: #161618;
+    --background-modifier-hover: #161618;
+    --background-modifier-active: #1e2022;
+    --background-modifier-selected: #1e2022;
+    --background-modifier-accent: #27272a;
+
+    /* Text */
+    --text-normal: #e7e8ea;
+    --text-muted: #969ba6;
+    --text-link: #22d3ee;
+    --text-positive: #22c55e;
+    --text-warning: #f59e0b;
+    --text-danger: #ef4444;
+    --text-brand: #ff6b0d;
+    --interactive-normal: #cfd2d6;
+    --interactive-hover: #e7e8ea;
+    --interactive-active: #ff6b0d;
+    --interactive-muted: #474b54;
+    --header-primary: #e7e8ea;
+    --header-secondary: #cfd2d6;
+
+    /* Channels list */
+    --channels-default: #969ba6;
+    --channeltextarea-background: #161618;
+
+    /* Status */
+    --status-positive-background: #22c55e;
+    --status-positive-text: #ffffff;
+    --status-warning-background: #f59e0b;
+    --status-warning-text: #ffffff;
+    --status-danger-background: #ef4444;
+    --status-danger-text: #ffffff;
+
+    /* Scrollbars */
+    --scrollbar-thin-thumb: #36393f;
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-thumb: #36393f;
+    --scrollbar-auto-track: #0e0e0f;
+    --scrollbar-auto-scrollbar-color-thumb: #36393f;
+    --scrollbar-auto-scrollbar-color-track: #0e0e0f;
+}
+
+.theme-dark {
+    --background-primary: #0e0e0f;
+    --background-secondary: #0e0e0f;
+    --background-tertiary: #0e0e0f;
+    --text-normal: #e7e8ea;
+}
+
+/* Code blocks */
+code,
+pre {
+    background: #161618 !important;
+    color: #2dd4bf !important;
+    border: 1px solid #27272a !important;
+}

@@ -124,18 +124,18 @@ The Dark variant used to ship as the standalone extension `makindajack.makinda-d
 ## Phase 10 — Backlog (Tier 3)
 
 - [x] Emacs `makinda-theme.el` (`ports/emacs/`)
-- [ ] Visual Studio (full) `.vssettings`
+- [x] Visual Studio (full) `.vssettings` (`ports/visual-studio/`)
 - [x] TextMate `.tmTheme` (`ports/textmate/`)
 - [x] Notepad++ XML (`ports/notepad-plus-plus/`)
-- [ ] Eclipse `.epf`
-- [ ] BBEdit, Nova, Lapce
-- [ ] Slack, Discord (BetterDiscord), Obsidian CSS
+- [x] Eclipse `.epf` (`ports/eclipse/`)
+- [x] BBEdit (`ports/bbedit/`), Nova (`ports/nova/`), Lapce (`ports/lapce/`)
+- [x] Slack (`ports/slack/`), Discord BetterDiscord (`ports/discord/`), Obsidian CSS (`ports/obsidian/`)
 
 ## Cross-cutting fixes
 
 - [x] Add CI (GitHub Actions): lint JSON, run build, run contrast check (`.github/workflows/ci.yml`)
 - [x] Add `scripts/contrast-check.mjs` — fails on AA violations for body text _(implemented as `build/contrast.mjs` + `npm run contrast:strict`)_
-- [ ] Add screenshot generator (Playwright + a reference snippet) to keep marketing PNGs in sync
+- [x] Add screenshot generator (Playwright + Shiki) to keep marketing PNGs in sync (`build/screenshots.mjs`, `npm run screenshots`). Requires `npm install --save-dev playwright shiki && npx playwright install chromium`.
 - [x] Single `release.mjs` that bumps version across every port and tags (`build/release.mjs`)
 
 ## Known issues to fix
@@ -154,8 +154,8 @@ These two are tracked as `advisory` in `build/contrast.mjs` so `npm run check` s
 
 Other:
 
-- [ ] Light theme: orange on white can vibrate at small font sizes — consider a slightly darker brand variant for inline accents (`#d94405`?)
-- [ ] Dark theme: terminal cursor color blends into selection on some terminals
+- [x] Light theme: orange on white can vibrate at small font sizes — addressed by reserving `brand.primaryHover` (`#c73b07`, 5.65 : 1 on white) for inline accents (keywords, syntax.keyword) while the brighter `brand.primary` (`#f05106`) stays as decorative accent for functions/tags. Documented as decision in [SCOPE.md](SCOPE.md).
+- [x] Dark theme: terminal cursor color blends into selection on some terminals — fixed by setting `terminalCursor.foreground = bg.editor` and `terminalCursor.background = brand.primary` in the VS Code dark theme so the cursor inverts cleanly over any background, including selection.
 - [x] Inconsistent comment color between Light and Dark — now Light `#6b7280` (subtle) / Dark `#7d8593` (subtle, lifted for contrast), both passing AA on their backgrounds. Intentional.
 
 ---

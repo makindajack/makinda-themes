@@ -81,6 +81,11 @@
     "build:textmate": "node build/textmate.mjs",
     "build:emacs": "node build/emacs.mjs",
     "build:notepad-plus-plus": "node build/notepad-plus-plus.mjs",
+    "build:visual-studio": "node build/visual-studio.mjs",
+    "build:eclipse": "node build/eclipse.mjs",
+    "build:bbedit": "node build/bbedit.mjs",
+    "build:nova": "node build/nova.mjs",
+    "build:lapce": "node build/lapce.mjs",
     "build:alacritty": "node build/alacritty.mjs",
     "build:kitty": "node build/kitty.mjs",
     "build:warp": "node build/warp.mjs",
@@ -88,6 +93,10 @@
     "build:ghostty": "node build/ghostty.mjs",
     "build:windows-terminal": "node build/windows-terminal.mjs",
     "build:iterm2": "node build/iterm2.mjs",
+    "build:slack": "node build/slack.mjs",
+    "build:discord": "node build/discord.mjs",
+    "build:obsidian": "node build/obsidian.mjs",
+    "screenshots": "node build/screenshots.mjs",
     "release": "node build/release.mjs"
   }
 }
