@@ -8,29 +8,29 @@ If this is your first time, read [§ One-time setup](#one-time-setup) first to c
 
 ## Where the themes live
 
-| Tier | Marketplace | Mechanism | First time | Updates |
-|---|---|---|---|---|
-| 1 | **VS Code Marketplace** | `vsce publish` | publisher account | seconds |
-| 1 | **Open VSX** (VSCodium / Cursor / Windsurf) | `ovsx publish` | namespace claim | seconds |
-| 1 | **JetBrains Marketplace** | `gradle publishPlugin` | manual zip upload | minutes |
-| 2 | **Sublime Package Control** | PR to `sublimehq/package_control_channel` | one PR | tag a new release |
-| 2 | **Obsidian community themes** | PR to `obsidianmd/obsidian-releases` | one PR | tag a new release |
-| 2 | **Zed extensions** | PR to `zed-industries/extensions` | one PR + CLA | bump submodule + version |
-| 3 | **BetterDiscord** | Web upload at <https://betterdiscord.app/developers> | account | manual upload |
-| 3 | **Visual Studio Marketplace** (full VS) | Web upload | publisher account | manual upload |
-| 3 | **Eclipse Marketplace** | Web form | account | manual upload |
-| 3 | **Nova Extensions** | `nova extension publish` | Panic ID + Nova app | CLI |
-| — | **Terminals** (Alacritty, Kitty, Warp, iTerm2, WezTerm, Ghostty, Windows Terminal, Helix, Lapce) | No marketplace | n/a | committed in [ports/](../ports) — users pull from GitHub |
-| — | **Other** (Slack, Emacs, Neovim, Xcode, TextMate, BBEdit, Notepad++, Eclipse EPF, Discord, Visual Studio settings, Nova) | Distributed via the [GitHub release](https://github.com/makindajack/makinda-themes/releases) | n/a | re-tag the release |
+| Tier | Marketplace                                                                                                              | Mechanism                                                                                    | First time          | Updates                                                  |
+| ---- | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | ------------------- | -------------------------------------------------------- |
+| 1    | **VS Code Marketplace**                                                                                                  | `vsce publish`                                                                               | publisher account   | seconds                                                  |
+| 1    | **Open VSX** (VSCodium / Cursor / Windsurf)                                                                              | `ovsx publish`                                                                               | namespace claim     | seconds                                                  |
+| 1    | **JetBrains Marketplace**                                                                                                | `gradle publishPlugin`                                                                       | manual zip upload   | minutes                                                  |
+| 2    | **Sublime Package Control**                                                                                              | PR to `sublimehq/package_control_channel`                                                    | one PR              | tag a new release                                        |
+| 2    | **Obsidian community themes**                                                                                            | PR to `obsidianmd/obsidian-releases`                                                         | one PR              | tag a new release                                        |
+| 2    | **Zed extensions**                                                                                                       | PR to `zed-industries/extensions`                                                            | one PR + CLA        | bump submodule + version                                 |
+| 3    | **BetterDiscord**                                                                                                        | Web upload at <https://betterdiscord.app/developers>                                         | account             | manual upload                                            |
+| 3    | **Visual Studio Marketplace** (full VS)                                                                                  | Web upload                                                                                   | publisher account   | manual upload                                            |
+| 3    | **Eclipse Marketplace**                                                                                                  | Web form                                                                                     | account             | manual upload                                            |
+| 3    | **Nova Extensions**                                                                                                      | `nova extension publish`                                                                     | Panic ID + Nova app | CLI                                                      |
+| —    | **Terminals** (Alacritty, Kitty, Warp, iTerm2, WezTerm, Ghostty, Windows Terminal, Helix, Lapce)                         | No marketplace                                                                               | n/a                 | committed in [ports/](../ports) — users pull from GitHub |
+| —    | **Other** (Slack, Emacs, Neovim, Xcode, TextMate, BBEdit, Notepad++, Eclipse EPF, Discord, Visual Studio settings, Nova) | Distributed via the [GitHub release](https://github.com/makindajack/makinda-themes/releases) | n/a                 | re-tag the release                                       |
 
 The repos that anchor the marketplace listings:
 
-| Repo | Marketplace |
-|---|---|
-| [makindajack/makinda-themes](https://github.com/makindajack/makinda-themes) | source-of-truth + VS Code + JetBrains |
-| [makindajack/makinda-sublime](https://github.com/makindajack/makinda-sublime) | Package Control |
-| [makindajack/makinda-obsidian](https://github.com/makindajack/makinda-obsidian) | Obsidian themes |
-| [makindajack/makinda-zed](https://github.com/makindajack/makinda-zed) | Zed extensions |
+| Repo                                                                            | Marketplace                           |
+| ------------------------------------------------------------------------------- | ------------------------------------- |
+| [makindajack/makinda-themes](https://github.com/makindajack/makinda-themes)     | source-of-truth + VS Code + JetBrains |
+| [makindajack/makinda-sublime](https://github.com/makindajack/makinda-sublime)   | Package Control                       |
+| [makindajack/makinda-obsidian](https://github.com/makindajack/makinda-obsidian) | Obsidian themes                       |
+| [makindajack/makinda-zed](https://github.com/makindajack/makinda-zed)           | Zed extensions                        |
 
 > ⚠️ The standalone repos exist because Package Control, Obsidian, and Zed each require the manifest at the **root of a dedicated repo**. Don't merge them back into the monorepo.
 
@@ -91,6 +91,7 @@ Run from the repo root unless noted. Replace `1.0.3` with the new version everyw
 ### 1. Decide the version
 
 Use [Semantic Versioning](https://semver.org):
+
 - **Patch** (`1.0.x`) — palette tweaks, contrast fixes, doc/screenshot updates.
 - **Minor** (`1.x.0`) — new IDE port, new semantic-token coverage, new editor features.
 - **Major** (`x.0.0`) — breaking palette changes (anyone with their own overrides will see different colors).
@@ -275,11 +276,13 @@ Reupload the relevant artifacts to the web portals listed in [§ One-time setup 
 ## Token rotation
 
 Rotate any token that's ever been:
+
 - pasted into a chat or screen recording,
 - committed to a repo (even briefly — assume Git history is forever),
 - copied to a machine you no longer control.
 
 Quickest way to rotate:
+
 - **VSCE_PAT** — <https://dev.azure.com> → avatar → Personal access tokens → revoke + new.
 - **OVSX_PAT** — <https://open-vsx.org> → Settings → Access Tokens → delete + generate.
 - **JETBRAINS_PUBLISH_TOKEN** — <https://plugins.jetbrains.com/author/me/tokens> → revoke + generate.
